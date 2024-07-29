@@ -17,6 +17,25 @@ const TruVideoReactCoreSdk = NativeModules.TruVideoReactCoreSdk
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return TruVideoReactCoreSdk.multiply(a, b);
+/**
+ * Authenticates the user using the provided API key and secret key.
+ *
+ * @param {string} apiKey - The API key for authentication.
+ * @param {string} secretKey - The secret key for authentication.
+ * @return {Promise<string>} A promise that resolves to the authentication response.
+ */
+export function authetication(
+  apiKey: string,
+  secretKey: string
+): Promise<string> {
+  return TruVideoReactCoreSdk.authetication(apiKey, secretKey);
+}
+
+/**
+ * Clears the authentication for the user.
+ *
+ * @return {Promise<string>} A promise that resolves to the authentication clear response.
+ */
+export function clearAuthentication(): Promise<string> {
+  return TruVideoReactCoreSdk.clearAuthentication();
 }

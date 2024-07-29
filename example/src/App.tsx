@@ -1,17 +1,36 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'truvideo-react-core-sdk';
+import { useEffect } from 'react';
+import { StyleSheet, View, Button } from 'react-native';
+import { authetication, clearAuthentication } from 'truvideo-react-core-sdk';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    authetication('EPhPPsbv7e', '9lHCnkfeLl')
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
   }, []);
+
+  const logOut = () => {
+    clearAuthentication()
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        onPress={logOut}
+        title="Logout..."
+        color="#eb4034"
+        accessibilityLabel="Clear authetication function will called here"
+      />
     </View>
   );
 }
