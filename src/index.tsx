@@ -28,7 +28,7 @@ export function authentication(
   apiKey: string,
   secretKey: string
 ): Promise<string> {
-  return TruVideoReactCoreSdk.authetication(apiKey, secretKey);
+  return TruVideoReactCoreSdk.authentication(apiKey, secretKey);
 }
 
 /**

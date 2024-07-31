@@ -2,7 +2,7 @@
 
 @interface RCT_EXTERN_MODULE(TruVideoReactCoreSdk, NSObject)
 
-RCT_EXTERN_METHOD(authetication:(NSString)apiKey withSecretKey:(NSString)secretKey
+RCT_EXTERN_METHOD(authentication:(NSString)apiKey withSecretKey:(NSString)secretKey
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 

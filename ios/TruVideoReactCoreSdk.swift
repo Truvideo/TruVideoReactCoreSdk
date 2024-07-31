@@ -5,8 +5,8 @@ import CommonCrypto
 @objc(TruVideoReactCoreSdk)
 class TruVideoReactCoreSdk: NSObject {
 
-    @objc(authetication:withSecretKey:withResolver:withRejecter:)
-      func authetication(apiKey: String, secretKey: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+    @objc(authentication:withSecretKey:withResolver:withRejecter:)
+      func authentication(apiKey: String, secretKey: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
             Task{
                 self.authenticate(apiKey: apiKey, secretKey: secretKey)
             }

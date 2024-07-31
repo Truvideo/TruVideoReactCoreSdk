@@ -29,7 +29,7 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
     promise.resolve(TruvideoSdk.isAuthenticationExpired)
   }
   @ReactMethod
-  fun authetication(apiKey : String , secretKey : String, promise: Promise) {
+  fun authentication(apiKey : String , secretKey : String, promise: Promise) {
     scope.launch {
       authenticate(apiKey, secretKey, promise)
     }
