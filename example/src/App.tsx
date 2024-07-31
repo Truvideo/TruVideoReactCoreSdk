@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
-import { authetication, clearAuthentication } from 'truvideo-react-core-sdk';
+import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
 
 export default function App() {
   useEffect(() => {
-    authetication('EPhPPsbv7e', '9lHCnkfeLl')
+    authentication('EPhPPsbv7e', '9lHCnkfeLl')
       .then((result) => {
         console.log('result', result);
       })
@@ -29,7 +29,7 @@ export default function App() {
         onPress={logOut}
         title="Logout..."
         color="#eb4034"
-        accessibilityLabel="Clear authetication function will called here"
+        accessibilityLabel="Clear authentication function will called here"
       />
     </View>
   );
