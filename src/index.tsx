@@ -26,9 +26,14 @@ const TruVideoReactCoreSdk = NativeModules.TruVideoReactCoreSdk
  */
 export function authentication(
   apiKey: string,
-  secretKey: string
+  secretKey: string,
+  externalId: string | null
 ): Promise<string> {
-  return TruVideoReactCoreSdk.authentication(apiKey, secretKey);
+  if (externalId == null) {
+    return TruVideoReactCoreSdk.authentication(apiKey, secretKey, 'null');
+  } else {
+    return TruVideoReactCoreSdk.authentication(apiKey, secretKey, externalId);
+  }
 }
 
 /**

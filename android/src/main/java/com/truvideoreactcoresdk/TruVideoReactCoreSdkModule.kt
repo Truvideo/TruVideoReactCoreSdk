@@ -29,14 +29,19 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
     promise.resolve(TruvideoSdk.isAuthenticationExpired)
   }
   @ReactMethod
-  fun authentication(apiKey : String , secretKey : String, promise: Promise) {
+  fun authentication(apiKey : String , secretKey : String,externalId: String, promise: Promise) {
     scope.launch {
-      authenticate(apiKey, secretKey, promise)
+      authenticate(
+        apiKey,
+        secretKey,
+        if (externalId == "null") null else externalId,
+        promise
+      )
     }
   }
 
   // Authentication function
-  suspend fun authenticate(apiKey: String, secretKey: String, promise: Promise) {
+  suspend fun authenticate(apiKey: String, secretKey: String,externalId : String?, promise: Promise) {
     try {
       // Check if user is authenticated
       val isAuthenticated = TruvideoSdk.isAuthenticated
@@ -52,7 +57,8 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
         TruvideoSdk.authenticate(
           apiKey = apiKey,
           payload = payload,
-          signature = signature!!
+          signature = signature!!,
+          externalId = externalId
         )
       }
       // If user is authenticated successfully
