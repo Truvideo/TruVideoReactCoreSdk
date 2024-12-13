@@ -4,7 +4,7 @@ import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
 
 export default function App() {
   useEffect(() => {
-    authentication('EPhPPsbv7e', '9lHCnkfeLl')
+    authentication('EPhPPsbv7e', '9lHCnkfeLl', '')
       .then((result) => {
         console.log('result', result);
       })
