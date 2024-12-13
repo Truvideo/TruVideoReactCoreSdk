@@ -178,5 +178,8 @@
     "type": "module-legacy",
     "languages": "kotlin-swift",
     "version": "0.39.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
   }
 }
