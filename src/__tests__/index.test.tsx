@@ -32,7 +32,7 @@ describe('authentication', () => {
       NativeModules.TruVideoReactCoreSdk.authentication as jest.Mock
     ).mockResolvedValue(mockResponse);
 
-    const result = await authentication(mockApiKey, mockSecretKey);
+    const result = await authentication(mockApiKey, mockSecretKey, '');
 
     // Assert that the mock function was called with the correct arguments
     expect(
@@ -49,7 +49,7 @@ describe('authentication', () => {
       NativeModules.TruVideoReactCoreSdk.authentication as jest.Mock
     ).mockRejectedValue(mockError);
 
-    await expect(authentication(mockApiKey, mockSecretKey)).rejects.toThrow(
+    await expect(authentication(mockApiKey, mockSecretKey, '')).rejects.toThrow(
       'mock error'
     );
 
