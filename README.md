@@ -12,11 +12,29 @@ npm install truvideo-react-core-sdk
 
 
 ```js
-import { multiply } from 'truvideo-react-core-sdk';
+import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await authentication('YOUR-API-KEY', 'YOUR-SECRET-KEY', '')
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+
+const logOut = () => {
+    clearAuthentication()
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  };
+
+
 ```
 
 
