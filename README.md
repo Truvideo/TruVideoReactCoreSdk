@@ -5,6 +5,13 @@ none
 ## Installation
 
 ```sh
+"dependencies": {
+  // replace token with your personal access token
+    "truvideo-react-core-sdk": "git+https://<token>@github.com/Truvideo/TruVideoReactCoreSdk.git#release-version-76"
+}
+
+// or
+
 npm install truvideo-react-core-sdk
 ```
 
