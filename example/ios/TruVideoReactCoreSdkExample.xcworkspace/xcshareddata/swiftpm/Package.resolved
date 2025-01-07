@@ -1,5 +1,5 @@
 {
-  "originHash" : "f9a2aad8f54461dcad0bcd19006d139849375d160fb3c3a8fd7a6d8f1e753fc4",
+  "originHash" : "83e6938af5426c2e30ae02e2177356242e9c9334338a0a37ab316cded85947bb",
   "pins" : [
     {
       "identity" : "aws-sdk-ios-spm",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Truvideo/truvideo-sdk-ios-core.git",
       "state" : {
-        "revision" : "4171b09b7d6422248329f166cae4f201e2d1757c",
-        "version" : "73.1.1"
+        "revision" : "1b311d46e8b91def5c7ee250c1c4deab9e958603",
+        "version" : "76.2.1"
       }
     }
   ],

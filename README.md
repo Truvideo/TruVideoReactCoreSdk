@@ -5,6 +5,13 @@ none
 ## Installation
 
 ```sh
+"dependencies": {
+  // replace token with your personal access token
+    "truvideo-react-core-sdk": "git+https://<token>@github.com/Truvideo/TruVideoReactCoreSdk.git#release-version-76"
+}
+
+// or
+
 npm install truvideo-react-core-sdk
 ```
 
@@ -12,11 +19,29 @@ npm install truvideo-react-core-sdk
 
 
 ```js
-import { multiply } from 'truvideo-react-core-sdk';
+import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await authentication('YOUR-API-KEY', 'YOUR-SECRET-KEY', '')
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+
+const logOut = () => {
+    clearAuthentication()
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  };
+
+
 ```
 
 

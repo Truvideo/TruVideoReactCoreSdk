@@ -22,26 +22,26 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun isAuthenticated(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticated)
+    promise.resolve(TruvideoSdk.isAuthenticated())
   }
   @ReactMethod
   fun isAuthenticationExpired(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticationExpired)
+    promise.resolve(TruvideoSdk.isAuthenticationExpired())
   }
   @ReactMethod
-  fun authentication(apiKey : String , secretKey : String, promise: Promise) {
+  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
     scope.launch {
-      authenticate(apiKey, secretKey, promise)
+      authenticate(apiKey, secretKey,extenalId,promise)
     }
   }
 
   // Authentication function
-  suspend fun authenticate(apiKey: String, secretKey: String, promise: Promise) {
+  suspend fun authenticate(apiKey: String, secretKey: String,extenalId : String, promise: Promise) {
     try {
       // Check if user is authenticated
-      val isAuthenticated = TruvideoSdk.isAuthenticated
+      val isAuthenticated = TruvideoSdk.isAuthenticated()
       // Check if authentication token has expired
-      val isAuthenticationExpired = TruvideoSdk.isAuthenticationExpired
+      val isAuthenticationExpired = TruvideoSdk.isAuthenticationExpired()
       if (!isAuthenticated || isAuthenticationExpired) {
         // get API key and secret key
         // generate payload for authentication
@@ -52,7 +52,8 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
         TruvideoSdk.authenticate(
           apiKey = apiKey,
           payload = payload,
-          signature = signature!!
+          signature = signature!!,
+          externalId = extenalId
         )
       }
       // If user is authenticated successfully

@@ -22,13 +22,15 @@ const TruVideoReactCoreSdk = NativeModules.TruVideoReactCoreSdk
  *
  * @param {string} apiKey - The API key for authentication.
  * @param {string} secretKey - The secret key for authentication.
+ * * @param {string} externalID - The secret key for authentication.
  * @return {Promise<string>} A promise that resolves to the authentication response.
  */
 export function authentication(
   apiKey: string,
-  secretKey: string
+  secretKey: string,
+  externalId: string
 ): Promise<string> {
-  return TruVideoReactCoreSdk.authentication(apiKey, secretKey);
+  return TruVideoReactCoreSdk.authentication(apiKey, secretKey, externalId);
 }
 
 /**

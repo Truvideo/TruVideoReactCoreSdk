@@ -95,6 +95,6 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation 'com.github.Truvideo:truvideo-sdk-android-core:73.1.1'
+  implementation 'com.github.Truvideo:truvideo-sdk-android-core:76.2.5'
 }
 
