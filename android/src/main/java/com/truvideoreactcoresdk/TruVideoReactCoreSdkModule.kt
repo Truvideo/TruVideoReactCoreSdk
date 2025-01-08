@@ -41,7 +41,7 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun generatePayload(promise: Promise){
-    promise.resolve( TruvideoSdk.generatePayload())
+    promise.resolve(TruvideoSdk.generatePayload().toString())
   }
 
   @ReactMethod
