@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
-import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
+import { isAuthenticated, clearAuthentication } from 'truvideo-react-core-sdk';
 
 export default function App() {
   useEffect(() => {
-    authentication('YOUR-API-KEY', 'YOUR-SECRET-KEY', '')
+    isAuthenticated()
       .then((result) => {
         console.log('result', result);
       })

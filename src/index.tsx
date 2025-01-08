@@ -25,14 +25,42 @@ const TruVideoReactCoreSdk = NativeModules.TruVideoReactCoreSdk
  * * @param {string} externalID - The secret key for authentication.
  * @return {Promise<string>} A promise that resolves to the authentication response.
  */
-export function authentication(
-  apiKey: string,
-  secretKey: string,
-  externalId: string
-): Promise<string> {
-  return TruVideoReactCoreSdk.authentication(apiKey, secretKey, externalId);
+// export function authentication(
+//   apiKey: string,
+//   secretKey: string,
+//   externalId: string
+// ): Promise<string> {
+//   return TruVideoReactCoreSdk.authentication(apiKey, secretKey, externalId);
+// }
+
+export function isAuthenticated(): Promise<boolean> {
+  return TruVideoReactCoreSdk.isAuthenticated();
 }
 
+export function isAuthenticationExpired(): Promise<boolean> {
+  return TruVideoReactCoreSdk.isAuthenticationExpired();
+}
+
+export function generatePayload(): Promise<string> {
+  return TruVideoReactCoreSdk.generatePayload();
+}
+export function authenticate(
+  apiKey: String,
+  payload: String,
+  signature: String,
+  externalId: String
+): Promise<string> {
+  return TruVideoReactCoreSdk.authenticate(
+    apiKey,
+    payload,
+    signature,
+    externalId
+  );
+}
+
+export function initAuthentication(): Promise<string> {
+  return TruVideoReactCoreSdk.initAuthentication();
+}
 /**
  * Clears the authentication for the user.
  *

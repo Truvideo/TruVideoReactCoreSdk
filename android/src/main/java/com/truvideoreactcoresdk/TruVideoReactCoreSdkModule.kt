@@ -1,17 +1,21 @@
 package com.truvideoreactcoresdk
 
+import android.support.annotation.NonNull
+import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
 import com.truvideo.sdk.core.TruvideoSdk
+import com.truvideo.sdk.core.interfaces.TruvideoSdkCallback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import truvideo.sdk.common.exceptions.TruvideoSdkException
 import java.security.InvalidKeyException
 import java.security.NoSuchAlgorithmException
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
+
 
 class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
@@ -28,11 +32,51 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   fun isAuthenticationExpired(promise: Promise){
     promise.resolve(TruvideoSdk.isAuthenticationExpired())
   }
+//  @ReactMethod
+//  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
+//    scope.launch {
+//      authenticate(apiKey, secretKey,extenalId,promise)
+//    }
+//  }
+
   @ReactMethod
-  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
-    scope.launch {
-      authenticate(apiKey, secretKey,extenalId,promise)
-    }
+  fun generatePayload(promise: Promise){
+    promise.resolve( TruvideoSdk.generatePayload())
+  }
+
+  @ReactMethod
+  fun authenticate(apiKey : String, payload : String, signature : String, externalId :String,promise: Promise){
+    TruvideoSdk.authenticate(
+      apiKey = apiKey,
+      payload = payload,
+      signature = signature!!,
+      externalId = externalId, object : TruvideoSdkCallback<Unit> {
+        override fun onComplete(unit: Unit) {
+          promise.resolve("Authenticate Successful")
+        }
+
+        override fun onError(@NonNull e: TruvideoSdkException) {
+          promise.reject(e.toString())
+        }
+      }
+    )
+
+
+  }
+
+  @ReactMethod
+  fun initAuthentication(promise: Promise){
+    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
+      override fun onComplete(result: Unit) {
+        promise.resolve("Init Successful")
+      }
+
+      override fun onError(exception: TruvideoSdkException) {
+        promise.reject(exception.toString())
+      }
+    })
+
+
   }
 
   // Authentication function
