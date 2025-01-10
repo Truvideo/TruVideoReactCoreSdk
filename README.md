@@ -12,13 +12,13 @@ npm install https://github.com/Truvideo/TruVideoReactCoreSdk.git
 
 
 ```js
-import { 
+import {
     isAuthenticated,
     isAuthenticationExpired,
     generatePayload,
     authenticate,
     initAuthentication,
-    clearAuthentication 
+    clearAuthentication
 } from 'TruVideoReactCoreSdk';
 
 // ...
@@ -26,10 +26,8 @@ import {
 const authFunc = async () => {
     try {
       const isAuth = await isAuthenticated();
-      console.log('isAuth', isAuth);
       // Check if authentication token has expired
       const isAuthExpired = await isAuthenticationExpired();
-      console.log('isAuthExpired', isAuthExpired);
       //generate payload for authentication
       const payload = await generatePayload();
       const apiKey = "YOUR-API-KEY";
@@ -42,7 +40,6 @@ const authFunc = async () => {
       }
       // If user is authenticated successfully
       const initAuth =  await initAuthentication();
-      console.log('initAuth', initAuth);
     } catch (error) {
       console.log('error', error);
     }
