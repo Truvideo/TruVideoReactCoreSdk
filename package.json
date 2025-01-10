@@ -127,7 +127,12 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
-      "prettier/prettier": []
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
     }
   },
   "eslintIgnore": [
