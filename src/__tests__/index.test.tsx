@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
-import {  clearAuthentication } from '../index';
+import { clearAuthentication } from '../index';
 
 // Mock the NativeModules and TruVideoReactCoreSdk module
 jest.mock('react-native', () => ({
