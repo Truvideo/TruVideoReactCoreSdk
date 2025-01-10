@@ -7,43 +7,77 @@ class TruVideoReactCoreSdk: NSObject {
 
 
   @objc(isAuthenticated:withRejecter:)
-  func isAuthenticated(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) ->Void{
-    resolve(TruvideoSdk.isAuthenticated())
+  func isAuthenticated(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+      do {
+          let isAuthenticated = try TruvideoSdk.isAuthenticated()
+          print("isAuthenticated", isAuthenticated)
+          // Dispatch to the main thread asynchronously
+              resolve(isAuthenticated)  // Resolving after a delay
+      } catch let error {
+          // Reject the promise in case of error
+          reject("IS_AUTHENTICATED_ERROR", "Failed to check authentication status", error)
+      }
   }
+
 
   @objc(isAuthenticationExpired:withRejecter:)
-  func isAuthenticationExpired(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) ->Void{
-    resolve(TruvideoSdk.isAuthenticationExpired())
-  }
-  
-  @objc(generatePayload:withRejecter:)
-  func generatePayload(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) ->Void{
-    resolve(TruvideoSdk.generatePayload())
+  func isAuthenticationExpired(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
+      do {
+          let isExpired = try TruvideoSdk.isAuthenticationExpired()
+        print("isExpired",isExpired)
+          resolve(isExpired)
+      } catch let error {
+          reject("IS_AUTH_EXPIRED_ERROR", "Failed to check authentication expiration", error)
+      }
   }
 
+  @objc(generatePayload:withRejecter:)
+  func generatePayload(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
+      do {
+          let payload = try TruvideoSdk.generatePayload()
+          resolve(payload)
+      } catch let error {
+          reject("GENERATE_PAYLOAD_ERROR", "Failed to generate payload", error)
+      }
+  }
+
+
   @objc(authenticate:withPayload:withSignature:withExternalId:withResolver:withRejecter:)
-  func authenticate(apiKey: String, payload: String, signature: String,externalId: String,resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) ->Void{
-    Task(operation: {
-          do{
-            try await TruvideoSdk.authenticate(apiKey: apiKey, payload: payload, signature: signature,externalId: externalId)
-            resolve("Authenticate Success")
-          }catch {
+  func authenticate(apiKey: String, payload: String, signature: String, externalId: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+      Task {
+          do {
+              try await TruvideoSdk.authenticate(apiKey: apiKey, payload: payload, signature: signature, externalId: externalId)
+              // Make sure resolve is called asynchronously to avoid capturing issues
+              DispatchQueue.main.async {
+                  resolve("Authenticate Success")
+              }
+          } catch {
+              // Handle the error and reject the promise
+              DispatchQueue.main.async {
+                  reject("AUTHENTICATE_ERROR", "Authentication failed", error)
+              }
           }
-        })
-  
+      }
   }
 
   @objc(initAuthentication:withRejecter:)
-  func initAuthentication(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) ->Void{
-    Task(operation: {
-          do{
-            try await TruvideoSdk.initAuthentication()
-            resolve("Authenticate Success")
-          }catch {
+  func initAuthentication(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+      Task {
+          do {
+              try await TruvideoSdk.initAuthentication()
+              // Make sure resolve is called asynchronously
+              DispatchQueue.main.async {
+                  resolve("Authenticate Success")
+              }
+          } catch {
+              // Handle the error and reject the promise
+              DispatchQueue.main.async {
+                  reject("INIT_AUTH_ERROR", "Initialization failed", error)
+              }
           }
-        })
-  
+      }
   }
+
 
 
   // @objc(authentication:withSecretKey:withExternalId:withResolver:withRejecter:)
