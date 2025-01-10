@@ -17,12 +17,13 @@ export default function App() {
       console.log('isAuthExpired', isAuthExpired);
       //generate payload for authentication
       const payload = await generatePayload();
-      const apiKey = "EPhPPsbv7e";
-      const signature = "9lHCnkfeLl";
-      const sha256 = await toSha256String(signature, payload);
+      const apiKey = "YOUR-API-KEY";
+      const secret = "YOUR-SECRET-KEY";
+      const signature = await toSha256String(secret, payload);
+      const externalID = ""
       // Authenticate user
       if (!isAuth || isAuthExpired) {
-        await authenticate(apiKey, payload, sha256, '');
+        await authenticate(apiKey, payload, signature, externalID);
       }
       // If user is authenticated successfully
       const initAuth =  await initAuthentication();
