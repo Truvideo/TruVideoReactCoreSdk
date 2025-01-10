@@ -5,31 +5,48 @@ none
 ## Installation
 
 ```sh
-"dependencies": {
-  // replace token with your personal access token
-    "truvideo-react-core-sdk": "git+https://<token>@github.com/Truvideo/TruVideoReactCoreSdk.git#release-version-76"
-}
-
-// or
-
-npm install truvideo-react-core-sdk
+npm install https://github.com/Truvideo/TruVideoReactCoreSdk.git
 ```
 
 ## Usage
 
 
 ```js
-import { authentication, clearAuthentication } from 'truvideo-react-core-sdk';
+import { 
+    isAuthenticated,
+    isAuthenticationExpired,
+    generatePayload,
+    authenticate,
+    initAuthentication,
+    clearAuthentication 
+} from 'TruVideoReactCoreSdk';
 
 // ...
 
-const result = await authentication('YOUR-API-KEY', 'YOUR-SECRET-KEY', '')
-      .then((result) => {
-        console.log('result', result);
-      })
-      .catch((error) => {
-        console.log('error', error);
-      });
+const authFunc = async () => {
+    try {
+      const isAuth = await isAuthenticated();
+      console.log('isAuth', isAuth);
+      // Check if authentication token has expired
+      const isAuthExpired = await isAuthenticationExpired();
+      console.log('isAuthExpired', isAuthExpired);
+      //generate payload for authentication
+      const payload = await generatePayload();
+      const apiKey = "YOUR-API-KEY";
+      const secretKey = "YOUR-SECRET-KEY";
+      const signature = await toSha256String(secretKey, payload);
+      const externalId = ""
+      // Authenticate user
+      if (!isAuth || isAuthExpired) {
+        await authenticate(apiKey, payload, signature,externalId);
+      }
+      // If user is authenticated successfully
+      const initAuth =  await initAuthentication();
+      console.log('initAuth', initAuth);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
 
 const logOut = () => {
     clearAuthentication()
