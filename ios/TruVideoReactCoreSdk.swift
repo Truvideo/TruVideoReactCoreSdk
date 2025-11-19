@@ -9,7 +9,7 @@ class TruVideoReactCoreSdk: NSObject {
   @objc(isAuthenticated:withRejecter:)
   func isAuthenticated(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
       do {
-          let isAuthenticated = try TruvideoSdk.isAuthenticated()
+        let isAuthenticated = try TruvideoSdk.isAuthenticated
           print("isAuthenticated", isAuthenticated)
           // Dispatch to the main thread asynchronously
               resolve(isAuthenticated)  // Resolving after a delay
