@@ -14,7 +14,17 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => min_ios_version_supported }
   s.source       = { :git => "https://github.com/akshay2801-rgb/TruVideoReactCoreSdk.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.source_files = "ios/**/*.{h,m,mm,cpp,swift}"
+  s.private_header_files = "ios/**/*.h"
+  #  s.static_framework = false
+  s.vendored_frameworks = ['ios/xcframeworks/AWSCognitoIdentityProvider.xcframework','ios/xcframeworks/AWSCognitoIdentityProviderASF.xcframework','ios/xcframeworks/AWSCore.xcframework','ios/xcframeworks/AWSS3.xcframework','ios/xcframeworks/shared.xcframework','ios/xcframeworks/TruvideoSdk.xcframework']
+  #  # s.static_framework = true
+ 
+  # s.dependency 'truvideo-sdk-core-pod', '~> 1.0.0'
+  # s.dependency 'AWSS3'
+  # s.dependency 'AWSCore'
+  # s.dependency 'AWSCognitoIdentityProvider'
+  # s.dependency 'AWSCognitoIdentityProviderASF'
 
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
   # See https://github.com/facebook/react-native/blob/febf6b7f33fdb4904669f99d795eba4c0f95d7bf/scripts/cocoapods/new_architecture.rb#L79.

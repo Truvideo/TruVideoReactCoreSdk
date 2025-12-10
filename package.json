@@ -35,6 +35,7 @@
     "example": "yarn workspace truvideo-react-core-sdk-example",
     "test": "jest",
     "typecheck": "tsc",
+    "sonar": "node sonarscan.js",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
