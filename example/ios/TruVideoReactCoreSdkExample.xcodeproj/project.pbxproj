@@ -15,7 +15,6 @@
 		33189B60C19F4D411B2D7DA5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0C4DC015C3797522D97F8C3F /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-TruVideoReactCoreSdkExample-TruVideoReactCoreSdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TruVideoReactCoreSdkExample-TruVideoReactCoreSdkExampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A863A91C2ECDF0C30016FC6E /* TruvideoSdk in Frameworks */ = {isa = PBXBuildFile; productRef = A863A91B2ECDF0C30016FC6E /* TruvideoSdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-TruVideoReactCoreSdkExample.a in Frameworks */,
-				A863A91C2ECDF0C30016FC6E /* TruvideoSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +195,6 @@
 			);
 			name = TruVideoReactCoreSdkExample;
 			packageProductDependencies = (
-				A863A91B2ECDF0C30016FC6E /* TruvideoSdk */,
 			);
 			productName = TruVideoReactCoreSdkExample;
 			productReference = 13B07F961A680F5B00A75B9A /* TruVideoReactCoreSdkExample.app */;
@@ -230,7 +227,6 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
-				A863A91A2ECDF0B10016FC6E /* XCRemoteSwiftPackageReference "truvideo-sdk-ios-core" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -496,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AKRSR3D9R9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TruVideoReactCoreSdkExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,7 +505,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.truvideo.core.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fiveexceptions.baicam;
 				PRODUCT_NAME = TruVideoReactCoreSdkExample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -524,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AKRSR3D9R9;
 				INFOPLIST_FILE = TruVideoReactCoreSdkExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,7 +532,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.truvideo.core.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fiveexceptions.baicam;
 				PRODUCT_NAME = TruVideoReactCoreSdkExample;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -727,25 +723,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A863A91A2ECDF0B10016FC6E /* XCRemoteSwiftPackageReference "truvideo-sdk-ios-core" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Truvideo/truvideo-sdk-ios-core";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 78.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A863A91B2ECDF0C30016FC6E /* TruvideoSdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A863A91A2ECDF0B10016FC6E /* XCRemoteSwiftPackageReference "truvideo-sdk-ios-core" */;
-			productName = TruvideoSdk;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
