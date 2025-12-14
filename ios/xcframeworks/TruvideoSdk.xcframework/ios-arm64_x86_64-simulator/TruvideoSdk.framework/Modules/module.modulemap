@@ -1,0 +1,11 @@
+framework module TruvideoSdk {
+  umbrella header "TruvideoSdk.h"
+  export *
+
+  module * { export * }
+}
+
+module TruvideoSdk.Swift {
+  header "TruvideoSdk-Swift.h"
+  requires objc
+}
