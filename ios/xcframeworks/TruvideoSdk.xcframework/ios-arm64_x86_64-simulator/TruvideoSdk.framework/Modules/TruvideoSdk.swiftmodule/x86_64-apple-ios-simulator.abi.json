@@ -1,83 +1,17 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "TruvideoSdk",
+    "printedName": "TruvideoSdk",
     "children": [
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
         "declKind": "Import",
         "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Network",
-        "printedName": "Network",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk"
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -89,13 +23,472 @@
         "moduleName": "TruvideoSdk"
       },
       {
+        "kind": "TypeDecl",
+        "name": "Context",
+        "printedName": "Context",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "brand",
+            "printedName": "brand",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk7ContextV5brandSSvp",
+            "mangledName": "$s11TruvideoSdk7ContextV5brandSSvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk7ContextV5brandSSvg",
+                "mangledName": "$s11TruvideoSdk7ContextV5brandSSvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "model",
+            "printedName": "model",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk7ContextV5modelSSvp",
+            "mangledName": "$s11TruvideoSdk7ContextV5modelSSvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk7ContextV5modelSSvg",
+                "mangledName": "$s11TruvideoSdk7ContextV5modelSSvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "os",
+            "printedName": "os",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk7ContextV2osSSvp",
+            "mangledName": "$s11TruvideoSdk7ContextV2osSSvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk7ContextV2osSSvg",
+                "mangledName": "$s11TruvideoSdk7ContextV2osSSvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "osVersion",
+            "printedName": "osVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk7ContextV9osVersionSSvp",
+            "mangledName": "$s11TruvideoSdk7ContextV9osVersionSSvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk7ContextV9osVersionSSvg",
+                "mangledName": "$s11TruvideoSdk7ContextV9osVersionSSvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk7ContextV9timestampSivp",
+            "mangledName": "$s11TruvideoSdk7ContextV9timestampSivp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk7ContextV9timestampSivg",
+                "mangledName": "$s11TruvideoSdk7ContextV9timestampSivg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "TruvideoSdk.Context",
+                "usr": "s:11TruvideoSdk7ContextV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11TruvideoSdk7ContextVACycfc",
+            "mangledName": "$s11TruvideoSdk7ContextVACycfc",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "TruvideoSdk.Context",
+                "usr": "s:11TruvideoSdk7ContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11TruvideoSdk7ContextV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11TruvideoSdk7ContextV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TruvideoSdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk7ContextV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11TruvideoSdk7ContextV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TruvideoSdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11TruvideoSdk7ContextV",
+        "mangledName": "$s11TruvideoSdk7ContextV",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
+        "name": "DI",
+        "printedName": "DI",
         "declKind": "Import",
         "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StorageKit",
+        "printedName": "StorageKit",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DI",
+        "printedName": "DI",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "InternalUtilities",
+        "printedName": "InternalUtilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StorageKit",
+        "printedName": "StorageKit",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -110,12 +503,12 @@
       },
       {
         "kind": "Import",
-        "name": "Network",
-        "printedName": "Network",
+        "name": "DI",
+        "printedName": "DI",
         "declKind": "Import",
         "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
@@ -123,196 +516,443 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "TruvideoSdk"
       },
       {
         "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
+        "name": "Utilities",
+        "printedName": "Utilities",
         "declKind": "Import",
         "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AWSS3",
-        "printedName": "AWSS3",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "TruvideoSdk",
-        "printedName": "TruvideoSdk",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "TruvideoSdkInterface",
-            "printedName": "any TruvideoSdk.TruvideoSdkInterface",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:11TruvideoSdkA2A0aB9Interface_pvp",
-        "mangledName": "$s11TruvideoSdkA2A0aB9Interface_pvp",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TruvideoSdkInterface",
-                "printedName": "any TruvideoSdk.TruvideoSdkInterface",
-                "usr": "s:11TruvideoSdk0aB9InterfaceP"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:11TruvideoSdkA2A0aB9Interface_pvg",
-            "mangledName": "$s11TruvideoSdkA2A0aB9Interface_pvg",
-            "moduleName": "TruvideoSdk",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Network",
-        "printedName": "Network",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
         "kind": "TypeDecl",
-        "name": "TruvideoSdkInterface",
-        "printedName": "TruvideoSdkInterface",
+        "name": "Signer",
+        "printedName": "Signer",
         "children": [
           {
             "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(_:secretKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "TruvideoSdk.Context",
+                "usr": "s:11TruvideoSdk7ContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk6SignerP4sign_9secretKeySSAA7ContextV_SStYaKF",
+            "mangledName": "$s11TruvideoSdk6SignerP4sign_9secretKeySSAA7ContextV_SStYaKF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.Signer>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.Signer>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11TruvideoSdk6SignerP",
+        "mangledName": "$s11TruvideoSdk6SignerP",
+        "moduleName": "TruvideoSdk",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HMACSHA256Signer",
+        "printedName": "HMACSHA256Signer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HMACSHA256Signer",
+                "printedName": "TruvideoSdk.HMACSHA256Signer",
+                "usr": "s:11TruvideoSdk16HMACSHA256SignerV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11TruvideoSdk16HMACSHA256SignerVACycfc",
+            "mangledName": "$s11TruvideoSdk16HMACSHA256SignerVACycfc",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(_:secretKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "TruvideoSdk.Context",
+                "usr": "s:11TruvideoSdk7ContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk16HMACSHA256SignerV4sign_9secretKeySSAA7ContextV_SStYaKF",
+            "mangledName": "$s11TruvideoSdk16HMACSHA256SignerV4sign_9secretKeySSAA7ContextV_SStYaKF",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11TruvideoSdk16HMACSHA256SignerV",
+        "mangledName": "$s11TruvideoSdk16HMACSHA256SignerV",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Signer",
+            "printedName": "Signer",
+            "usr": "s:11TruvideoSdk6SignerP",
+            "mangledName": "$s11TruvideoSdk6SignerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DI",
+        "printedName": "DI",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DI",
+        "printedName": "DI",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "InternalUtilities",
+        "printedName": "InternalUtilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MediaUpload",
+        "printedName": "MediaUpload",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Networking",
+        "printedName": "Networking",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Registry",
+        "printedName": "Registry",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StorageKit",
+        "printedName": "StorageKit",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Telemetry",
+        "printedName": "Telemetry",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TruVideoSDK",
+        "printedName": "TruVideoSDK",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isAuthenticated",
+            "printedName": "isAuthenticated",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP15isAuthenticatedSbvp",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP15isAuthenticatedSbvp",
+            "moduleName": "TruvideoSdk",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk11TruVideoSDKP15isAuthenticatedSbvg",
+                "mangledName": "$s11TruvideoSdk11TruVideoSDKP15isAuthenticatedSbvg",
+                "moduleName": "TruvideoSdk",
+                "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+                "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "options",
+            "printedName": "options",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoOptions",
+                "printedName": "TruvideoSdk.TruVideoOptions",
+                "usr": "s:11TruvideoSdk15TruVideoOptionsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP7optionsAA0cD7OptionsVvp",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP7optionsAA0cD7OptionsVvp",
+            "moduleName": "TruvideoSdk",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoOptions",
+                    "printedName": "TruvideoSdk.TruVideoOptions",
+                    "usr": "s:11TruvideoSdk15TruVideoOptionsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk11TruVideoSDKP7optionsAA0cD7OptionsVvg",
+                "mangledName": "$s11TruvideoSdk11TruVideoSDKP7optionsAA0cD7OptionsVvg",
+                "moduleName": "TruvideoSdk",
+                "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+                "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
             "name": "authenticate",
-            "printedName": "authenticate(apiKey:payload:signature:externalId:)",
+            "printedName": "authenticate(apiKey:secretKey:externalId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -333,23 +973,80 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP12authenticate6apiKey7payload9signature10externalIdySS_S3StYaKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP12authenticate6apiKey7payload9signature10externalIdySS_S3StYaKF",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP12authenticate6apiKey06secretH010externalIdySS_S2SSgtYaKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP12authenticate6apiKey06secretH010externalIdySS_S2SSgtYaKF",
             "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoOptions",
+                "printedName": "TruvideoSdk.TruVideoOptions",
+                "usr": "s:11TruvideoSdk15TruVideoOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP9configure4withyAA0cD7OptionsV_tF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP9configure4withyAA0cD7OptionsV_tF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "signOut",
+            "printedName": "signOut()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP7signOutyyKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP7signOutyyKF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
             "protocolReq": true,
             "declAttributes": [
               "RawDocComment"
@@ -371,141 +1068,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP6apiKeySSyKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP6apiKeySSyKF",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP6apiKeySSyKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP6apiKeySSyKF",
             "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
             "protocolReq": true,
             "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearAuthentication",
-            "printedName": "clearAuthentication()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP19clearAuthenticationyyKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP19clearAuthenticationyyKF",
-            "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "generatePayload",
-            "printedName": "generatePayload()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP15generatePayloadSSyKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP15generatePayloadSSyKF",
-            "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "initAuthentication",
-            "printedName": "initAuthentication()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP18initAuthenticationyyYaKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP18initAuthenticationyyYaKF",
-            "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "isAuthenticated",
-            "printedName": "isAuthenticated()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP15isAuthenticatedSbyKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP15isAuthenticatedSbyKF",
-            "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "isAuthenticationExpired",
-            "printedName": "isAuthenticationExpired()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfaceP23isAuthenticationExpiredSbyKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfaceP23isAuthenticationExpiredSbyKF",
-            "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
-            "protocolReq": true,
-            "declAttributes": [
+              "Available",
               "RawDocComment"
             ],
             "throwing": true,
@@ -542,437 +1113,173 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP12authenticate6apiKey7payload9signature10externalIdySS_S3SSgtYaKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP12authenticate6apiKey7payload9signature10externalIdySS_S3SSgtYaKF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearAuthentication",
+            "printedName": "clearAuthentication()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP19clearAuthenticationyyKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP19clearAuthenticationyyKF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generatePayload",
+            "printedName": "generatePayload()",
+            "children": [
+              {
+                "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
-                "hasDefaultArg": true,
                 "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9InterfacePAAE12authenticate6apiKey7payload9signature10externalIdySS_S3StYaKF",
-            "mangledName": "$s11TruvideoSdk0aB9InterfacePAAE12authenticate6apiKey7payload9signature10externalIdySS_S3StYaKF",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP15generatePayloadSSyKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP15generatePayloadSSyKF",
             "moduleName": "TruvideoSdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruvideoSdkInterface>",
-            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruvideoSdkInterface>",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl",
+              "Available",
               "RawDocComment"
             ],
-            "isFromExtension": true,
             "throwing": true,
+            "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:11TruvideoSdk0aB9InterfaceP",
-        "mangledName": "$s11TruvideoSdk0aB9InterfaceP",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "shared",
-        "printedName": "shared",
-        "declKind": "Import",
-        "moduleName": "TruvideoSdk",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TruvideoSdkCoreError",
-        "printedName": "TruvideoSdkCoreError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "couldNotCheckIfItIsOnline",
-            "printedName": "couldNotCheckIfItIsOnline",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TruvideoSdkCoreError",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                    "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO25couldNotCheckIfItIsOnlineyA2CmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO25couldNotCheckIfItIsOnlineyA2CmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "fileNotFound",
-            "printedName": "fileNotFound",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> (Foundation.URL) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Foundation.URL) -> TruvideoSdk.TruvideoSdkCoreError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(url: Foundation.URL)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "URL",
-                            "printedName": "Foundation.URL",
-                            "usr": "s:10Foundation3URLV"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO12fileNotFoundyAC10Foundation3URLV_tcACmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO12fileNotFoundyAC10Foundation3URLV_tcACmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "generic",
-            "printedName": "generic",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TruvideoSdkCoreError",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                    "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO7genericyA2CmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO7genericyA2CmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "invalidFile",
-            "printedName": "invalidFile",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> (Foundation.URL) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Foundation.URL) -> TruvideoSdk.TruvideoSdkCoreError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(url: Foundation.URL)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "URL",
-                            "printedName": "Foundation.URL",
-                            "usr": "s:10Foundation3URLV"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO11invalidFileyAC10Foundation3URLV_tcACmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO11invalidFileyAC10Foundation3URLV_tcACmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "uploadError",
-            "printedName": "uploadError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> (Swift.String) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> TruvideoSdk.TruvideoSdkCoreError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(message: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO06uploadD0yACSS_tcACmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO06uploadD0yACSS_tcACmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "userIsNotAuthenticated",
-            "printedName": "userIsNotAuthenticated",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TruvideoSdk.TruvideoSdkCoreError.Type) -> TruvideoSdk.TruvideoSdkCoreError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TruvideoSdkCoreError",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                    "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TruvideoSdk.TruvideoSdkCoreError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TruvideoSdkCoreError",
-                        "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                        "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO22userIsNotAuthenticatedyA2CmF",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO22userIsNotAuthenticatedyA2CmF",
-            "moduleName": "TruvideoSdk",
-            "declAttributes": [
-              "RawDocComment"
-            ]
           },
           {
             "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
+            "name": "initAuthentication",
+            "printedName": "initAuthentication()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP18initAuthenticationyyYaKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP18initAuthenticationyyYaKF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAuthenticationExpired",
+            "printedName": "isAuthenticationExpired()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TruvideoSdkCoreError",
-                "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                "usr": "s:11TruvideoSdk0aB9CoreErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TruvideoSdkCoreError",
-                "printedName": "TruvideoSdk.TruvideoSdkCoreError",
-                "usr": "s:11TruvideoSdk0aB9CoreErrorO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11TruvideoSdk0aB9CoreErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s11TruvideoSdk0aB9CoreErrorO2eeoiySbAC_ACtFZ",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP23isAuthenticationExpiredSbyKF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKP23isAuthenticationExpiredSbyKF",
             "moduleName": "TruvideoSdk",
-            "static": true,
-            "implicit": true,
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "deprecated": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11TruvideoSdk11TruVideoSDKPAAE9configureyyF",
+            "mangledName": "$s11TruvideoSdk11TruVideoSDKPAAE9configureyyF",
+            "moduleName": "TruvideoSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruvideoSdk.TruVideoSDK>",
+            "sugared_genericSig": "<Self where Self : TruvideoSdk.TruVideoSDK>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Enum",
-        "usr": "s:11TruvideoSdk0aB9CoreErrorO",
-        "mangledName": "$s11TruvideoSdk0aB9CoreErrorO",
+        "declKind": "Protocol",
+        "usr": "s:11TruvideoSdk11TruVideoSDKP",
+        "mangledName": "$s11TruvideoSdk11TruVideoSDKP",
         "moduleName": "TruvideoSdk",
         "declAttributes": [
           "AccessControl",
@@ -981,17 +1288,1126 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TruVideoOptions",
+        "printedName": "TruVideoOptions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "signer",
+            "printedName": "signer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Signer",
+                "printedName": "any TruvideoSdk.Signer",
+                "usr": "s:11TruvideoSdk6SignerP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk15TruVideoOptionsV6signerAA6Signer_pvp",
+            "mangledName": "$s11TruvideoSdk15TruVideoOptionsV6signerAA6Signer_pvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Signer",
+                    "printedName": "any TruvideoSdk.Signer",
+                    "usr": "s:11TruvideoSdk6SignerP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk15TruVideoOptionsV6signerAA6Signer_pvg",
+                "mangledName": "$s11TruvideoSdk15TruVideoOptionsV6signerAA6Signer_pvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(signer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoOptions",
+                "printedName": "TruvideoSdk.TruVideoOptions",
+                "usr": "s:11TruvideoSdk15TruVideoOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Signer",
+                "printedName": "any TruvideoSdk.Signer",
+                "hasDefaultArg": true,
+                "usr": "s:11TruvideoSdk6SignerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11TruvideoSdk15TruVideoOptionsV6signerAcA6Signer_p_tcfc",
+            "mangledName": "$s11TruvideoSdk15TruVideoOptionsV6signerAcA6Signer_p_tcfc",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11TruvideoSdk15TruVideoOptionsV",
+        "mangledName": "$s11TruvideoSdk15TruVideoOptionsV",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DI",
+        "printedName": "DI",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Registry",
+        "printedName": "Registry",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "TruvideoSdk",
+        "printedName": "TruvideoSdk",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "TruVideoSDK",
+            "printedName": "any TruvideoSdk.TruVideoSDK",
+            "usr": "s:11TruvideoSdk11TruVideoSDKP"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:11TruvideoSdkA2A11TruVideoSDK_pvp",
+        "mangledName": "$s11TruvideoSdkA2A11TruVideoSDK_pvp",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSDK",
+                "printedName": "any TruvideoSdk.TruVideoSDK",
+                "usr": "s:11TruvideoSdk11TruVideoSDKP"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:11TruvideoSdkA2A11TruVideoSDK_pvg",
+            "mangledName": "$s11TruvideoSdkA2A11TruVideoSDK_pvg",
+            "moduleName": "TruvideoSdk",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TruVideoSdkError",
+        "printedName": "TruVideoSdkError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "kind",
+            "printedName": "kind",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV4kindAC0E6ReasonVvp",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV4kindAC0E6ReasonVvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV4kindAC0E6ReasonVvg",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV4kindAC0E6ReasonVvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV16errorDescriptionSSSgvp",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV16errorDescriptionSSSgvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV16errorDescriptionSSSgvg",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV16errorDescriptionSSSgvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failureReason",
+            "printedName": "failureReason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV13failureReasonSSSgvp",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV13failureReasonSSSgvp",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV13failureReasonSSSgvg",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV13failureReasonSSSgvg",
+                "moduleName": "TruvideoSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authenticationFailed",
+            "printedName": "authenticationFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV20authenticationFailedACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV20authenticationFailedACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV20authenticationFailedACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV20authenticationFailedACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "configurationRequired",
+            "printedName": "configurationRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV21configurationRequiredACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV21configurationRequiredACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV21configurationRequiredACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV21configurationRequiredACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signOutFailed",
+            "printedName": "signOutFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV13signOutFailedACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV13signOutFailedACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV13signOutFailedACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV13signOutFailedACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV7unknownACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV7unknownACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV7unknownACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV7unknownACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ErrorReason",
+            "printedName": "ErrorReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueSSvp",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueSSvp",
+                "moduleName": "TruvideoSdk",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueSSvg",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueSSvg",
+                    "moduleName": "TruvideoSdk",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "authenticationFailed",
+                "printedName": "authenticationFailed",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV20authenticationFailedAEvpZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV20authenticationFailedAEvpZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV20authenticationFailedAEvgZ",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV20authenticationFailedAEvgZ",
+                    "moduleName": "TruvideoSdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "configurationRequired",
+                "printedName": "configurationRequired",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV21configurationRequiredAEvpZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV21configurationRequiredAEvpZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV21configurationRequiredAEvgZ",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV21configurationRequiredAEvgZ",
+                    "moduleName": "TruvideoSdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "invalidApiKey",
+                "printedName": "invalidApiKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV13invalidApiKeyAEvpZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV13invalidApiKeyAEvpZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV13invalidApiKeyAEvgZ",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV13invalidApiKeyAEvgZ",
+                    "moduleName": "TruvideoSdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "invalidSignature",
+                "printedName": "invalidSignature",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV16invalidSignatureAEvpZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV16invalidSignatureAEvpZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV16invalidSignatureAEvgZ",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV16invalidSignatureAEvgZ",
+                    "moduleName": "TruvideoSdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV7unknownAEvpZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV7unknownAEvpZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV7unknownAEvgZ",
+                    "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV7unknownAEvgZ",
+                    "moduleName": "TruvideoSdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruvideoSdk.TruVideoSdkError.ErrorReason",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueAESS_tcfc",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV8rawValueAESS_tcfc",
+                "moduleName": "TruvideoSdk",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV0E6ReasonV",
+            "moduleName": "TruvideoSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "apiKeyNotFound",
+            "printedName": "apiKeyNotFound",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV14apiKeyNotFoundACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV14apiKeyNotFoundACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV14apiKeyNotFoundACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV14apiKeyNotFoundACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "payloadGenerationFailed",
+            "printedName": "payloadGenerationFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TruVideoSdkError",
+                "printedName": "TruvideoSdk.TruVideoSdkError",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11TruvideoSdk08TruVideoB5ErrorV23payloadGenerationFailedACvpZ",
+            "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV23payloadGenerationFailedACvpZ",
+            "moduleName": "TruvideoSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TruVideoSdkError",
+                    "printedName": "TruvideoSdk.TruVideoSdkError",
+                    "usr": "s:11TruvideoSdk08TruVideoB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11TruvideoSdk08TruVideoB5ErrorV23payloadGenerationFailedACvgZ",
+                "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV23payloadGenerationFailedACvgZ",
+                "moduleName": "TruvideoSdk",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11TruvideoSdk08TruVideoB5ErrorV",
+        "mangledName": "$s11TruvideoSdk08TruVideoB5ErrorV",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -1002,6 +2418,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -1010,118 +2433,78 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NWPathMonitor",
-        "printedName": "NWPathMonitor",
-        "declKind": "Class",
-        "usr": "s:7Network13NWPathMonitorC",
-        "mangledName": "$s7Network13NWPathMonitorC",
-        "moduleName": "Network",
-        "intro_Macosx": "10.14",
-        "intro_iOS": "12.0",
-        "intro_tvOS": "12.0",
-        "intro_watchOS": "5.0",
+        "kind": "Import",
+        "name": "CloudStorageKit",
+        "printedName": "CloudStorageKit",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "Final",
-          "Available",
-          "Available",
-          "Available",
-          "Available"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AsyncSequence",
-            "printedName": "AsyncSequence",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AsyncIterator",
-                "printedName": "AsyncIterator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Iterator",
-                    "printedName": "Network.NWPathMonitor.Iterator",
-                    "usr": "s:7Network13NWPathMonitorC8IteratorV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NWPath",
-                    "printedName": "Network.NWPath",
-                    "usr": "s:7Network6NWPathV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sci",
-            "mangledName": "$sSci"
-          }
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NWPath",
-        "printedName": "NWPath",
-        "declKind": "Struct",
-        "usr": "s:7Network6NWPathV",
-        "mangledName": "$s7Network6NWPathV",
-        "moduleName": "Network",
-        "intro_Macosx": "10.14",
-        "intro_iOS": "12.0",
-        "intro_tvOS": "12.0",
-        "intro_watchOS": "5.0",
+        "kind": "Import",
+        "name": "DI",
+        "printedName": "DI",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
         "declAttributes": [
-          "Available",
-          "Available",
-          "Available",
-          "Available"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Telemetry",
+        "printedName": "Telemetry",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TruVideoApi",
+        "printedName": "TruVideoApi",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Utilities",
+        "printedName": "Utilities",
+        "declKind": "Import",
+        "moduleName": "TruvideoSdk",
+        "declAttributes": [
+          "AccessControl"
         ]
       }
     ],
@@ -1129,319 +2512,235 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Legacy\/LegacyStorage.swift",
       "kind": "StringLiteral",
-      "offset": 16620,
-      "length": 10,
-      "value": "\"CRITICAL\""
+      "offset": 3828,
+      "length": 30,
+      "value": "\"truvideo-sdk-common-settings\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 16642,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Migrator\/Migrator.swift",
       "kind": "StringLiteral",
-      "offset": 16813,
-      "length": 7,
-      "value": "\"DEBUG\""
+      "offset": 3553,
+      "length": 30,
+      "value": "\"truvideo-sdk-common-settings\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 16832,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
       "kind": "StringLiteral",
-      "offset": 16928,
-      "length": 7,
-      "value": "\"ERROR\""
+      "offset": 542,
+      "length": 16,
+      "value": "\"apiKeyNotFound\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 16947,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
       "kind": "StringLiteral",
-      "offset": 17048,
-      "length": 6,
-      "value": "\"INFO\""
+      "offset": 587,
+      "length": 35,
+      "value": "\"API key not found or unavailable.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 17066,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
       "kind": "StringLiteral",
-      "offset": 17238,
-      "length": 8,
-      "value": "\"NOTICE\""
+      "offset": 647,
+      "length": 73,
+      "value": "\"The required API key could not be retrieved from the configured source.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 17258,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
       "kind": "StringLiteral",
-      "offset": 17444,
-      "length": 7,
-      "value": "\"TRACE\""
+      "offset": 1045,
+      "length": 25,
+      "value": "\"payloadGenerationFailed\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
       "kind": "StringLiteral",
-      "offset": 17614,
-      "length": 9,
-      "value": "\"WARNING\""
+      "offset": 1099,
+      "length": 37,
+      "value": "\"Unable to generate request payload.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 17635,
-      "length": 1,
-      "value": "4"
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp+Deprecation.swift",
+      "kind": "StringLiteral",
+      "offset": 1161,
+      "length": 56,
+      "value": "\"The data provided could not be encoded or was invalid.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Key\/MetadataKey.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10835,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/App\/TruVideoApp.swift",
+      "kind": "StringLiteral",
+      "offset": 11018,
+      "length": 36,
+      "value": "\"com.truvideo.app.pathMonitor.queue\""
+    },
+    {
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Library\/TruVideoSDKLibrary.swift",
+      "kind": "StringLiteral",
+      "offset": 561,
+      "length": 13,
+      "value": "\"TruVideoSdk\""
+    },
+    {
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Library\/TruVideoSDKLibrary.swift",
       "kind": "StringLiteral",
       "offset": 850,
-      "length": 27,
-      "value": "\"com.truVideo.metadata.key\""
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Network\/NetworkMonitor.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Library\/TruVideoSDKLibrary.swift",
       "kind": "StringLiteral",
-      "offset": 802,
-      "length": 26,
-      "value": "\"com.truVideo.sdk.monitor\""
+      "offset": 894,
+      "length": 9,
+      "value": "\"Unknown\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Network\/NetworkMonitor.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 553,
-      "length": 14,
-      "value": "\"TruvideoSdk.NetworkMonitor\""
+      "offset": 1676,
+      "length": 69,
+      "value": "\"Authentication failed. Please check your credentials and try again.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Device\/DeviceProvider.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 390,
-      "length": 14,
-      "value": "\"TruvideoSdk.DeviceProvider\""
+      "offset": 1770,
+      "length": 46,
+      "value": "\"Invalid API key, secret key, or external ID.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/CI.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1678,
-      "length": 6,
-      "value": "\"BETA\""
+      "offset": 2150,
+      "length": 75,
+      "value": "\"TruVideo SDK requires configuration. Please configure the SDK before use.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/CI.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1761,
-      "length": 5,
-      "value": "\"DEV\""
+      "offset": 2250,
+      "length": 54,
+      "value": "\"SDK configuration is required before authentication.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/CI.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1845,
-      "length": 6,
-      "value": "\"PROD\""
+      "offset": 2651,
+      "length": 15,
+      "value": "\"signOutFailed\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/CI.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1963,
-      "length": 4,
-      "value": "\"RC\""
+      "offset": 2695,
+      "length": 18,
+      "value": "\"Sign-out failed.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/CI.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 2094,
-      "length": 6,
-      "value": "\"PROD\""
+      "offset": 2738,
+      "length": 66,
+      "value": "\"An error occurred during the sign-out process. Please try again.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/S3\/Client\/AWSS3Client.swift",
-      "kind": "IntegerLiteral",
-      "offset": 553,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/S3\/Client\/AWSS3Client.swift",
-      "kind": "IntegerLiteral",
-      "offset": 558,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/LogDestination.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 8084,
-      "length": 166,
-      "value": "\"[$E $L]:\n     Date: $D\n     File: $F\n     Function: $f\n     Line: $l\n     Metadata: {$m}\n     Source: $S\n     Message: $M\n\""
+      "offset": 3209,
+      "length": 55,
+      "value": "\"An unexpected error occurred. Please try again later.\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Bootstrapper.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 2685,
-      "length": 24,
-      "value": "\"com.truVideoSdk.logger\""
+      "offset": 3289,
+      "length": 49,
+      "value": "\"Unknown error type that could not be classified\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 878,
-      "length": 17,
-      "value": "\"event_core_auth\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
-      "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 4081,
       "length": 22,
-      "value": "\"event_core_auth_init\""
+      "value": "\"authenticationFailed\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1137,
+      "offset": 4635,
       "length": 23,
-      "value": "\"event_core_auth_clear\""
+      "value": "\"configurationRequired\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1271,
-      "length": 26,
-      "value": "\"event_core_auth_validate\""
+      "offset": 5091,
+      "length": 15,
+      "value": "\"invalidApiKey\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1402,
-      "length": 17,
-      "value": "\"event_core_init\""
+      "offset": 5525,
+      "length": 18,
+      "value": "\"invalidSignature\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Error\/TruVideoSdkError.swift",
       "kind": "StringLiteral",
-      "offset": 1532,
-      "length": 29,
-      "value": "\"event_core_is_authenticated\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
-      "kind": "StringLiteral",
-      "offset": 1681,
-      "length": 38,
-      "value": "\"event_core_is_authentication_expired\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
-      "kind": "StringLiteral",
-      "offset": 1823,
-      "length": 20,
-      "value": "\"event_core_api_key\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Tag\/Tag.swift",
-      "kind": "StringLiteral",
-      "offset": 1956,
-      "length": 29,
-      "value": "\"event_core_generate_payload\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 1048,
+      "offset": 5631,
       "length": 9,
-      "value": "\"version\""
+      "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Processor\/UploadProcessor.swift",
       "kind": "StringLiteral",
-      "offset": 1067,
-      "length": 12,
-      "value": "\"properties\""
+      "offset": 1102,
+      "length": 36,
+      "value": "\"com.truvideo.uploadProcessor.queue\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Processor\/UploadProcessor.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
-      "length": 2,
-      "value": "\"\""
+      "offset": 6595,
+      "length": 24,
+      "value": "\"makeCloudStorageFailed\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Version.swift",
       "kind": "StringLiteral",
-      "offset": 1423,
+      "offset": 119,
+      "length": 8,
+      "value": "\"78.2.1\""
+    },
+    {
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 149,
+      "length": 6,
+      "value": "\"PROD\""
+    },
+    {
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 177,
       "length": 3,
-      "value": "\"=\""
+      "value": "\"0\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1479,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1495,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
+      "filePath": "\/Users\/jorge\/Desktop\/Projects\/Mobile\/iOS\/truvideo-ios-sdk\/Libraries\/External\/Extended\/App\/Sources\/Version.swift",
       "kind": "StringLiteral",
-      "offset": 1501,
-      "length": 9,
-      "value": "\"version\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1576,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Logger\/Destination\/CoreLogDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 1613,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/TruvideoSdk\/Protocols\/TruvideoSdkInterface.swift",
-      "kind": "StringLiteral",
-      "offset": 5034,
-      "length": 2,
-      "value": "\"\""
+      "offset": 200,
+      "length": 45,
+      "value": "\"ozEVUiZDlaerA4k2W6\/M4u+HrRZ1jCxM7Yv1H80n57U\""
     }
   ]
 }

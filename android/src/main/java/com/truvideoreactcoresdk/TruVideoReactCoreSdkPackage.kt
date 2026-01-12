@@ -1,4 +1,4 @@
-package com.truvideoreactcoresdk
+package com.trunpm.truvideoreactcoresdk
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

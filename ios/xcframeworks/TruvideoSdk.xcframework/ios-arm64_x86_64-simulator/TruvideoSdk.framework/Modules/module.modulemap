@@ -1,5 +1,5 @@
 framework module TruvideoSdk {
-  umbrella header "TruvideoSdk.h"
+  umbrella header "TruVideoSdk.h"
   export *
 
   module * { export * }

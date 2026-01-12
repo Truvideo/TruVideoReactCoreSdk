@@ -1,18 +1,13 @@
 //
-//  TruvideoSdk.h
-//  TruvideoSdk
-//
-//  Created by Jorge Orjuela on 8/31/23.
+// Copyright © 2025 TruVideo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for TruvideoSdk.
-FOUNDATION_EXPORT double TruvideoSdkVersionNumber;
+//! Project version number for TruVideoSdk.
+FOUNDATION_EXPORT double TruVideoSdkVersionNumber;
 
-//! Project version string for TruvideoSdk.
-FOUNDATION_EXPORT const unsigned char TruvideoSdkVersionString[];
+//! Project version string for TruVideoSdk.
+FOUNDATION_EXPORT const unsigned char TruVideoSdkVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <TruvideoSdk/PublicHeader.h>
-
-
+// In this header, you should import all the public headers of your framework using statements like #import <TruVideoSdk/PublicHeader.h> 
