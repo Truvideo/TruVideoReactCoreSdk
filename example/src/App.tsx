@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
-import { isAuthenticated, clearAuthentication, generatePayload, isAuthenticationExpired, authenticate, initAuthentication } from 'truvideo-react-core-sdk';
+import { isAuthenticated, clearAuthentication, generatePayload, isAuthenticationExpired, authenticate, initAuthentication } from '@trunpm/truvideo-react-core-sdk';
 import QuickCrypto from 'react-native-quick-crypto';
 
 export default function App() {
