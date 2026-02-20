@@ -9,21 +9,26 @@ class TruVideoReactCoreSdk: NSObject {
 
   @objc(isAuthenticated:withRejecter:)
   func isAuthenticated(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+    Task{
       do {
-        let isAuthenticated = try TruvideoSdk.isAuthenticated()
-          print("isAuthenticated", isAuthenticated)
-          // Dispatch to the main thread asynchronously
-              resolve(isAuthenticated)  // Resolving after a delay
+        await  TruvideoSdk.configure()
+        await try TruvideoSdk.initAuthentication()
+        
+        // Dispatch to the main thread asynchronously
+        resolve(true)  // Resolving after a delay
       } catch let error {
-          // Reject the promise in case of error
-          reject("IS_AUTHENTICATED_ERROR", "Failed to check authentication status", error)
+        // Reject the promise in case of error
+        reject("IS_AUTHENTICATED_ERROR", "Failed to check authentication status", error)
       }
+    }
   }
+    
 
 
   @objc(isAuthenticationExpired:withRejecter:)
   func isAuthenticationExpired(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
       do {
+          TruvideoSdk.configure()
           let isExpired = try TruvideoSdk.isAuthenticationExpired()
         print("isExpired",isExpired)
           resolve(isExpired)
@@ -35,6 +40,7 @@ class TruVideoReactCoreSdk: NSObject {
   @objc(generatePayload:withRejecter:)
   func generatePayload(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
       do {
+          TruvideoSdk.configure()
           let payload = try TruvideoSdk.generatePayload()
           resolve(payload)
       } catch let error {
@@ -65,6 +71,7 @@ class TruVideoReactCoreSdk: NSObject {
   func initAuthentication(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
       Task {
           do {
+              await  TruvideoSdk.configure()
               try await TruvideoSdk.initAuthentication()
               // Make sure resolve is called asynchronously
               DispatchQueue.main.async {
