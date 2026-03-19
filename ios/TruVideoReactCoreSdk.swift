@@ -105,7 +105,8 @@ class TruVideoReactCoreSdk: NSObject {
     print("[TruVideoSDK] clearAuthentication called")
     Task {
       do {
-        try TruvideoSdk.clearAuthentication()
+        // try TruvideoSdk.clearAuthentication()
+        try TruvideoSdk.signOut()
         print("[TruVideoSDK] clearAuthentication success")
         DispatchQueue.main.async {
           resolve("Session Finished")
