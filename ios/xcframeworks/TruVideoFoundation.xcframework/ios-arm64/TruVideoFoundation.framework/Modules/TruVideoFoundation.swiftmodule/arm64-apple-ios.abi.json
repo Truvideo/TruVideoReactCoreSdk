@@ -1,0 +1,3398 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TruVideoFoundation",
+    "printedName": "TruVideoFoundation",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileWriter",
+        "printedName": "FileWriter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10FileWriterP6remove2aty0C03URLV_tAA12UtilityErrorVYKF",
+            "mangledName": "$s18TruVideoFoundation10FileWriterP6remove2aty0C03URLV_tAA12UtilityErrorVYKF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : TruVideoFoundation.FileWriter>",
+            "sugared_genericSig": "<Self where Self : TruVideoFoundation.FileWriter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10FileWriterP5write_2toyqd___0C03URLVtAA12UtilityErrorVYKSeRd__SERd__lF",
+            "mangledName": "$s18TruVideoFoundation10FileWriterP5write_2toyqd___0C03URLVtAA12UtilityErrorVYKSeRd__SERd__lF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : TruVideoFoundation.FileWriter, τ_1_0 : Swift.Decodable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : TruVideoFoundation.FileWriter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18TruVideoFoundation10FileWriterP",
+        "mangledName": "$s18TruVideoFoundation10FileWriterP",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MetadataValue",
+        "printedName": "MetadataValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "array",
+            "printedName": "array",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> ([TruVideoFoundation.MetadataValue]) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([TruVideoFoundation.MetadataValue]) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[TruVideoFoundation.MetadataValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MetadataValue",
+                            "printedName": "TruVideoFoundation.MetadataValue",
+                            "usr": "s:18TruVideoFoundation13MetadataValueO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO5arrayyACSayACGcACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO5arrayyACSayACGcACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "bool",
+            "printedName": "bool",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> (Swift.Bool) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO4boolyACSbcACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO4boolyACSbcACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "dictionary",
+            "printedName": "dictionary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> ([Swift.String : TruVideoFoundation.MetadataValue]) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.String : TruVideoFoundation.MetadataValue]) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : TruVideoFoundation.MetadataValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MetadataValue",
+                            "printedName": "TruVideoFoundation.MetadataValue",
+                            "usr": "s:18TruVideoFoundation13MetadataValueO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO10dictionaryyACSDySSACGcACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO10dictionaryyACSDySSACGcACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "double",
+            "printedName": "double",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> (Swift.Double) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO6doubleyACSdcACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO6doubleyACSdcACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "int",
+            "printedName": "int",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> (Swift.Int) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO3intyACSicACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO3intyACSicACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TruVideoFoundation.MetadataValue.Type) -> (Swift.String) -> TruVideoFoundation.MetadataValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> TruVideoFoundation.MetadataValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TruVideoFoundation.MetadataValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18TruVideoFoundation13MetadataValueO6stringyACSScACmF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO6stringyACSScACmF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation13MetadataValueO04hashE0Sivp",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO04hashE0Sivp",
+            "moduleName": "TruVideoFoundation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation13MetadataValueO04hashE0Sivg",
+                "mangledName": "$s18TruVideoFoundation13MetadataValueO04hashE0Sivg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation13MetadataValueO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO4hash4intoys6HasherVz_tF",
+            "moduleName": "TruVideoFoundation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation13MetadataValueO11descriptionSSvp",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO11descriptionSSvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation13MetadataValueO11descriptionSSvg",
+                "mangledName": "$s18TruVideoFoundation13MetadataValueO11descriptionSSvg",
+                "moduleName": "TruVideoFoundation",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation13MetadataValueO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO6encode2toys7Encoder_p_tKF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation13MetadataValueO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO2eeoiySbAC_ACtFZ",
+            "moduleName": "TruVideoFoundation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(arrayLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[TruVideoFoundation.MetadataValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MetadataValue",
+                    "printedName": "TruVideoFoundation.MetadataValue",
+                    "usr": "s:18TruVideoFoundation13MetadataValueO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO12arrayLiteralA2Cd_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO12arrayLiteralA2Cd_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(booleanLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO14booleanLiteralACSb_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO14booleanLiteralACSb_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(dictionaryLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(Swift.String, TruVideoFoundation.MetadataValue)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String, TruVideoFoundation.MetadataValue)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MetadataValue",
+                        "printedName": "TruVideoFoundation.MetadataValue",
+                        "usr": "s:18TruVideoFoundation13MetadataValueO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO17dictionaryLiteralACSS_ACtd_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO17dictionaryLiteralACSS_ACtd_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(floatLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO12floatLiteralACSd_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO12floatLiteralACSd_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(integerLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO14integerLiteralACSi_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO14integerLiteralACSi_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MetadataValue",
+                "printedName": "TruVideoFoundation.MetadataValue",
+                "usr": "s:18TruVideoFoundation13MetadataValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation13MetadataValueO13stringLiteralACSS_tcfc",
+            "mangledName": "$s18TruVideoFoundation13MetadataValueO13stringLiteralACSS_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18TruVideoFoundation13MetadataValueO",
+        "mangledName": "$s18TruVideoFoundation13MetadataValueO",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen",
+          "RawDocComment"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MetadataValue",
+                    "printedName": "TruVideoFoundation.MetadataValue",
+                    "usr": "s:18TruVideoFoundation13MetadataValueO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByBooleanLiteral",
+            "printedName": "ExpressibleByBooleanLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "BooleanLiteralType",
+                "printedName": "BooleanLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByBooleanLiteralP",
+            "mangledName": "$ss27ExpressibleByBooleanLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByDictionaryLiteral",
+            "printedName": "ExpressibleByDictionaryLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MetadataValue",
+                    "printedName": "TruVideoFoundation.MetadataValue",
+                    "usr": "s:18TruVideoFoundation13MetadataValueO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30ExpressibleByDictionaryLiteralP",
+            "mangledName": "$ss30ExpressibleByDictionaryLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByFloatLiteral",
+            "printedName": "ExpressibleByFloatLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "FloatLiteralType",
+                "printedName": "FloatLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByFloatLiteralP",
+            "mangledName": "$ss25ExpressibleByFloatLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByIntegerLiteral",
+            "printedName": "ExpressibleByIntegerLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "IntegerLiteralType",
+                "printedName": "IntegerLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByIntegerLiteralP",
+            "mangledName": "$ss27ExpressibleByIntegerLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringInterpolation",
+            "printedName": "ExpressibleByStringInterpolation",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringInterpolation",
+                "printedName": "StringInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultStringInterpolation",
+                    "printedName": "Swift.DefaultStringInterpolation",
+                    "usr": "s:s26DefaultStringInterpolationV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s32ExpressibleByStringInterpolationP",
+            "mangledName": "$ss32ExpressibleByStringInterpolationP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RingBuffer",
+        "printedName": "RingBuffer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "capacity",
+            "printedName": "capacity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation10RingBufferV8capacitySivp",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV8capacitySivp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation10RingBufferV8capacitySivg",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV8capacitySivg",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "count",
+            "printedName": "count",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation10RingBufferV5countSivp",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV5countSivp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation10RingBufferV5countSivg",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV5countSivg",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEmpty",
+            "printedName": "isEmpty",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation10RingBufferV7isEmptySbvp",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV7isEmptySbvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation10RingBufferV7isEmptySbvg",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV7isEmptySbvg",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFull",
+            "printedName": "isFull",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation10RingBufferV6isFullSbvp",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV6isFullSbvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation10RingBufferV6isFullSbvg",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV6isFullSbvg",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:18TruVideoFoundation10RingBufferVyxSicip",
+            "mangledName": "$s18TruVideoFoundation10RingBufferVyxSicip",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation10RingBufferVyxSicig",
+                "mangledName": "$s18TruVideoFoundation10RingBufferVyxSicig",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "BufferingPolicy",
+            "printedName": "BufferingPolicy",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bufferingNewest",
+                "printedName": "bufferingNewest",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "GenericFunction",
+                    "printedName": "<τ_0_0> (TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type) -> (Swift.Int) -> TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BufferingPolicy",
+                            "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BufferingPolicy",
+                            "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO15bufferingNewestyAEyx_GSicAGmlF",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV15BufferingPolicyO15bufferingNewestyAEyx_GSicAGmlF",
+                "moduleName": "TruVideoFoundation",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "bufferingOldest",
+                "printedName": "bufferingOldest",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "GenericFunction",
+                    "printedName": "<τ_0_0> (TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type) -> (Swift.Int) -> TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BufferingPolicy",
+                            "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BufferingPolicy",
+                            "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO15bufferingOldestyAEyx_GSicAGmlF",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV15BufferingPolicyO15bufferingOldestyAEyx_GSicAGmlF",
+                "moduleName": "TruVideoFoundation",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "unbounded",
+                "printedName": "unbounded",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "GenericFunction",
+                    "printedName": "<τ_0_0> (TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type) -> TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BufferingPolicy",
+                        "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                        "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "BufferingPolicy",
+                            "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO9unboundedyAEyx_GAGmlF",
+                "mangledName": "$s18TruVideoFoundation10RingBufferV15BufferingPolicyO9unboundedyAEyx_GAGmlF",
+                "moduleName": "TruVideoFoundation",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV15BufferingPolicyO",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(bufferingPolicy:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RingBuffer",
+                "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:18TruVideoFoundation10RingBufferV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BufferingPolicy",
+                "printedName": "TruVideoFoundation.RingBuffer<τ_0_0>.BufferingPolicy",
+                "usr": "s:18TruVideoFoundation10RingBufferV15BufferingPolicyO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation10RingBufferV15bufferingPolicyACyxGAC09BufferingG0Oyx_G_tcfc",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV15bufferingPolicyACyxGAC09BufferingG0Oyx_G_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10RingBufferV3addyxSgxF",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV3addyxSgxF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAll",
+            "printedName": "removeAll(keepingCapacity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10RingBufferV9removeAll15keepingCapacityySb_tF",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV9removeAll15keepingCapacityySb_tF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeFirst",
+            "printedName": "removeFirst()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10RingBufferV11removeFirstxSgyF",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV11removeFirstxSgyF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeLast",
+            "printedName": "removeLast()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10RingBufferV10removeLastxSgyF",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV10removeLastxSgyF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeIterator",
+            "printedName": "makeIterator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyIterator",
+                "printedName": "Swift.AnyIterator<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:s11AnyIteratorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation10RingBufferV12makeIterators03AnyG0VyxGyF",
+            "mangledName": "$s18TruVideoFoundation10RingBufferV12makeIterators03AnyG0VyxGyF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Element>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18TruVideoFoundation10RingBufferV",
+        "mangledName": "$s18TruVideoFoundation10RingBufferV",
+        "moduleName": "TruVideoFoundation",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Element>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyIterator",
+                    "printedName": "Swift.AnyIterator<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s11AnyIteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SystemFileWriter",
+        "printedName": "SystemFileWriter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(encoder:fileManager:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SystemFileWriter",
+                "printedName": "TruVideoFoundation.SystemFileWriter",
+                "usr": "s:18TruVideoFoundation16SystemFileWriterV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JSONEncoder",
+                "printedName": "Foundation.JSONEncoder",
+                "hasDefaultArg": true,
+                "usr": "s:10Foundation11JSONEncoderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FileManager",
+                "printedName": "Foundation.FileManager",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSFileManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation16SystemFileWriterV7encoder11fileManagerAC0C011JSONEncoderC_So06NSFileI0Ctcfc",
+            "mangledName": "$s18TruVideoFoundation16SystemFileWriterV7encoder11fileManagerAC0C011JSONEncoderC_So06NSFileI0Ctcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation16SystemFileWriterV6remove2aty0C03URLV_tAA12UtilityErrorVYKF",
+            "mangledName": "$s18TruVideoFoundation16SystemFileWriterV6remove2aty0C03URLV_tAA12UtilityErrorVYKF",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18TruVideoFoundation16SystemFileWriterV5write_2toyx_0C03URLVtAA12UtilityErrorVYKSeRzSERzlF",
+            "mangledName": "$s18TruVideoFoundation16SystemFileWriterV5write_2toyx_0C03URLVtAA12UtilityErrorVYKSeRzSERzlF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18TruVideoFoundation16SystemFileWriterV",
+        "mangledName": "$s18TruVideoFoundation16SystemFileWriterV",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FileWriter",
+            "printedName": "FileWriter",
+            "usr": "s:18TruVideoFoundation10FileWriterP",
+            "mangledName": "$s18TruVideoFoundation10FileWriterP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ErrorReason",
+        "printedName": "ErrorReason",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation11ErrorReasonV8rawValueSSvp",
+            "mangledName": "$s18TruVideoFoundation11ErrorReasonV8rawValueSSvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV8rawValueSSvg",
+                "mangledName": "$s18TruVideoFoundation11ErrorReasonV8rawValueSSvg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruVideoFoundation.ErrorReason",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation11ErrorReasonV7unknownACvpZ",
+            "mangledName": "$s18TruVideoFoundation11ErrorReasonV7unknownACvpZ",
+            "moduleName": "TruVideoFoundation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruVideoFoundation.ErrorReason",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV7unknownACvgZ",
+                "mangledName": "$s18TruVideoFoundation11ErrorReasonV7unknownACvgZ",
+                "moduleName": "TruVideoFoundation",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruVideoFoundation.ErrorReason",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation11ErrorReasonV8rawValueACSS_tcfc",
+            "mangledName": "$s18TruVideoFoundation11ErrorReasonV8rawValueACSS_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "FileWriterErrorReason",
+            "printedName": "FileWriterErrorReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "removeAtURLFailed",
+                "printedName": "removeAtURLFailed",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruVideoFoundation.ErrorReason",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV010FileWriterdE0V17removeAtURLFailedACvpZ",
+                "mangledName": "$s18TruVideoFoundation11ErrorReasonV010FileWriterdE0V17removeAtURLFailedACvpZ",
+                "moduleName": "TruVideoFoundation",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruVideoFoundation.ErrorReason",
+                        "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV010FileWriterdE0V17removeAtURLFailedACvgZ",
+                    "mangledName": "$s18TruVideoFoundation11ErrorReasonV010FileWriterdE0V17removeAtURLFailedACvgZ",
+                    "moduleName": "TruVideoFoundation",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "writeToFileFailed",
+                "printedName": "writeToFileFailed",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruVideoFoundation.ErrorReason",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV010FileWriterdE0V07writeToF6FailedACvpZ",
+                "mangledName": "$s18TruVideoFoundation11ErrorReasonV010FileWriterdE0V07writeToF6FailedACvpZ",
+                "moduleName": "TruVideoFoundation",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorReason",
+                        "printedName": "TruVideoFoundation.ErrorReason",
+                        "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV010FileWriterdE0V07writeToF6FailedACvgZ",
+                    "mangledName": "$s18TruVideoFoundation11ErrorReasonV010FileWriterdE0V07writeToF6FailedACvgZ",
+                    "moduleName": "TruVideoFoundation",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:18TruVideoFoundation11ErrorReasonV010FileWriterdE0V",
+            "mangledName": "$s18TruVideoFoundation11ErrorReasonV010FileWriterdE0V",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruVideoFoundation.ErrorReason",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation11ErrorReasonV13stringLiteralACSS_tcfc",
+            "mangledName": "$s18TruVideoFoundation11ErrorReasonV13stringLiteralACSS_tcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18TruVideoFoundation11ErrorReasonV",
+        "mangledName": "$s18TruVideoFoundation11ErrorReasonV",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UtilityError",
+        "printedName": "UtilityError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "column",
+            "printedName": "column",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV6columnSivp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV6columnSivp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV6columnSivg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV6columnSivg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failureReason",
+            "printedName": "failureReason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV13failureReasonSSSgvp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV13failureReasonSSSgvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV13failureReasonSSSgvg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV13failureReasonSSSgvg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "line",
+            "printedName": "line",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV4lineSivp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV4lineSivp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV4lineSivg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV4lineSivg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kind",
+            "printedName": "kind",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruVideoFoundation.ErrorReason",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV4kindAA0E6ReasonVvp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV4kindAA0E6ReasonVvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorReason",
+                    "printedName": "TruVideoFoundation.ErrorReason",
+                    "usr": "s:18TruVideoFoundation11ErrorReasonV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV4kindAA0E6ReasonVvg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV4kindAA0E6ReasonVvg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "underlyingError",
+            "printedName": "underlyingError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV010underlyingE0s0E0_pSgvp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV010underlyingE0s0E0_pSgvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV010underlyingE0s0E0_pSgvg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV010underlyingE0s0E0_pSgvg",
+                "moduleName": "TruVideoFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV16errorDescriptionSSSgvp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV16errorDescriptionSSSgvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV16errorDescriptionSSSgvg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV16errorDescriptionSSSgvg",
+                "moduleName": "TruVideoFoundation",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(kind:failureReason:underlyingError:column:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UtilityError",
+                "printedName": "TruVideoFoundation.UtilityError",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorReason",
+                "printedName": "TruVideoFoundation.ErrorReason",
+                "usr": "s:18TruVideoFoundation11ErrorReasonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV4kind13failureReason010underlyingE06column4lineAcA0eH0V_SSSgs0E0_pSgS2itcfc",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV4kind13failureReason010underlyingE06column4lineAcA0eH0V_SSSgs0E0_pSgS2itcfc",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18TruVideoFoundation12UtilityErrorV16debugDescriptionSSvp",
+            "mangledName": "$s18TruVideoFoundation12UtilityErrorV16debugDescriptionSSvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18TruVideoFoundation12UtilityErrorV16debugDescriptionSSvg",
+                "mangledName": "$s18TruVideoFoundation12UtilityErrorV16debugDescriptionSSvg",
+                "moduleName": "TruVideoFoundation",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18TruVideoFoundation12UtilityErrorV",
+        "mangledName": "$s18TruVideoFoundation12UtilityErrorV",
+        "moduleName": "TruVideoFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dictionary",
+        "printedName": "Dictionary",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dictionary",
+            "printedName": "dictionary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:SD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE10dictionarySDySSypGvp",
+            "mangledName": "$sSD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE10dictionarySDySSypGvp",
+            "moduleName": "TruVideoFoundation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:SD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE10dictionarySDySSypGvg",
+                "mangledName": "$sSD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE10dictionarySDySSypGvg",
+                "moduleName": "TruVideoFoundation",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.String, τ_0_1 == TruVideoFoundation.MetadataValue>",
+                "sugared_genericSig": "<Key, Value where Key == Swift.String, Value == TruVideoFoundation.MetadataValue>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "prettify",
+            "printedName": "prettify()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE8prettifySSSgyF",
+            "mangledName": "$sSD18TruVideoFoundationSSRszAA13MetadataValueORs_rlE8prettifySSSgyF",
+            "moduleName": "TruVideoFoundation",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.String, τ_0_1 == TruVideoFoundation.MetadataValue>",
+            "sugared_genericSig": "<Key, Value where Key == Swift.String, Value == TruVideoFoundation.MetadataValue>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:SD",
+        "mangledName": "$sSD",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Key, Value where Key : Swift.Hashable>",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Index",
+                    "usr": "s:SD5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Slice",
+                    "printedName": "Swift.Slice<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:s5SliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByDictionaryLiteral",
+            "printedName": "ExpressibleByDictionaryLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30ExpressibleByDictionaryLiteralP",
+            "mangledName": "$ss30ExpressibleByDictionaryLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/RingBuffer\/RingBuffer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3757,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/RingBuffer\/RingBuffer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3782,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/RingBuffer\/RingBuffer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3846,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/RingBuffer\/RingBuffer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18406,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/FileWriter\/SystemFileWriter\/SystemFileWriter.swift",
+      "kind": "StringLiteral",
+      "offset": 560,
+      "length": 22,
+      "value": "\"REMOVE_AT_URL_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/FileWriter\/SystemFileWriter\/SystemFileWriter.swift",
+      "kind": "StringLiteral",
+      "offset": 717,
+      "length": 22,
+      "value": "\"WRITE_TO_FILE_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/Foundation\/Sources\/Error\/UtilityError.swift",
+      "kind": "StringLiteral",
+      "offset": 427,
+      "length": 9,
+      "value": "\"unknown\""
+    }
+  ]
+}

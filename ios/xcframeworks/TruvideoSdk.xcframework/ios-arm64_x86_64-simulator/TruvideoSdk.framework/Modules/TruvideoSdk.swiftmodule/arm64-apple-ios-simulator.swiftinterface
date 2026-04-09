@@ -1,10 +1,10 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TruvideoSdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CommonCrypto
 import Foundation
 import Swift
+import TruVideoApi
 @_exported import TruvideoSdk
 import UIKit
 import _Concurrency
@@ -64,6 +64,7 @@ public struct TruVideoSdkError : Foundation.LocalizedError {
   public let failureReason: Swift.String?
   public static let authenticationFailed: TruvideoSdk.TruVideoSdkError
   public static let configurationRequired: TruvideoSdk.TruVideoSdkError
+  public static let failedToRefreshToken: TruvideoSdk.TruVideoSdkError
   public static let signOutFailed: TruvideoSdk.TruVideoSdkError
   public static let unknown: TruvideoSdk.TruVideoSdkError
   public struct ErrorReason : Swift.Equatable, Swift.RawRepresentable {

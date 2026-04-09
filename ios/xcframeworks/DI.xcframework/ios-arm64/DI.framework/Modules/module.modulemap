@@ -1,0 +1,6 @@
+framework module DI {
+  umbrella header "DI.h"
+  export *
+
+  module * { export * }
+}

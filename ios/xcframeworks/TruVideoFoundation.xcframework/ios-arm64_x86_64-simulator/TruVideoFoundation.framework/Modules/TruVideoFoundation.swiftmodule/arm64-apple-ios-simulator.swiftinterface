@@ -1,0 +1,154 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TruVideoFoundation
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol FileWriter {
+  #if compiler(>=5.3) && $TypedThrows
+  func remove(at url: Foundation.URL) throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func write(_ content: some Codable, to url: Foundation.URL) throws(TruVideoFoundation.UtilityError)
+  #endif
+}
+public typealias Metadata = [Swift.String : TruVideoFoundation.MetadataValue]
+extension Swift.Dictionary where Key == Swift.String, Value == TruVideoFoundation.MetadataValue {
+  public var dictionary: [Swift.String : Any] {
+    get
+  }
+  public func prettify() -> Swift.String?
+}
+@frozen public enum MetadataValue : Swift.Sendable, Swift.Hashable {
+  case array([TruVideoFoundation.Metadata.Value])
+  case bool(Swift.Bool)
+  case dictionary(TruVideoFoundation.Metadata)
+  case double(Swift.Double)
+  case int(Swift.Int)
+  case string(Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension TruVideoFoundation.MetadataValue : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension TruVideoFoundation.MetadataValue : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TruVideoFoundation.MetadataValue : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension TruVideoFoundation.MetadataValue : Swift.Equatable {
+  public static func == (lhs: TruVideoFoundation.Metadata.Value, rhs: TruVideoFoundation.Metadata.Value) -> Swift.Bool
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: TruVideoFoundation.Metadata.Value...)
+  public typealias ArrayLiteralElement = TruVideoFoundation.Metadata.Value
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, TruVideoFoundation.Metadata.Value)...)
+  public typealias Key = Swift.String
+  public typealias Value = TruVideoFoundation.Metadata.Value
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension TruVideoFoundation.MetadataValue : Swift.ExpressibleByStringInterpolation {
+  public typealias StringInterpolation = Swift.DefaultStringInterpolation
+}
+public struct RingBuffer<Element> : Swift.Sequence {
+  public var capacity: Swift.Int {
+    get
+  }
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var isFull: Swift.Bool {
+    get
+  }
+  public subscript(index: Swift.Int) -> Element {
+    get
+  }
+  public enum BufferingPolicy {
+    case bufferingNewest(Swift.Int)
+    case bufferingOldest(Swift.Int)
+    case unbounded
+  }
+  public init(bufferingPolicy limit: TruVideoFoundation.RingBuffer<Element>.BufferingPolicy)
+  @discardableResult
+  public mutating func add(_ element: Element) -> Element?
+  public mutating func removeAll(keepingCapacity: Swift.Bool = true)
+  @discardableResult
+  public mutating func removeFirst() -> Element?
+  @discardableResult
+  public mutating func removeLast() -> Element?
+  public func makeIterator() -> Swift.AnyIterator<Element>
+  public typealias Iterator = Swift.AnyIterator<Element>
+}
+extension TruVideoFoundation.ErrorReason {
+  public struct FileWriterErrorReason : Swift.Sendable {
+    public static let removeAtURLFailed: TruVideoFoundation.ErrorReason
+    public static let writeToFileFailed: TruVideoFoundation.ErrorReason
+  }
+}
+public struct SystemFileWriter : TruVideoFoundation.FileWriter {
+  public init(encoder: Foundation.JSONEncoder = JSONEncoder(), fileManager: Foundation.FileManager = FileManager())
+  #if compiler(>=5.3) && $TypedThrows
+  public func remove(at url: Foundation.URL) throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  public func write(_ content: some Codable, to url: Foundation.URL) throws(TruVideoFoundation.UtilityError)
+  #endif
+}
+public struct ErrorReason : Swift.Equatable, Swift.RawRepresentable {
+  public let rawValue: Swift.String
+  public static let unknown: TruVideoFoundation.ErrorReason
+  public init(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+extension TruVideoFoundation.ErrorReason : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public struct UtilityError : Foundation.LocalizedError {
+  public let column: Swift.Int
+  public let failureReason: Swift.String?
+  public let line: Swift.Int
+  public let kind: TruVideoFoundation.ErrorReason
+  public let underlyingError: (any Swift.Error)?
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init(kind: TruVideoFoundation.ErrorReason, failureReason: Swift.String? = nil, underlyingError: (any Swift.Error)? = nil, column: Swift.Int = #column, line: Swift.Int = #line)
+}
+extension TruVideoFoundation.UtilityError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}

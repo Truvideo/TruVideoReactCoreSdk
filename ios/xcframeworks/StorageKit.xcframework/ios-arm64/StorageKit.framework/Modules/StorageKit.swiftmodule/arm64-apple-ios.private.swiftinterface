@@ -1,0 +1,61 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StorageKit
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct FileSystemStorage : StorageKit.Storage, @unchecked Swift.Sendable {
+  public init(url: Foundation.URL? = nil, fileManager: Foundation.FileManager = .default)
+  public func clear() throws
+  public func deleteValue(for key: (some StorageKey).Type) throws
+  public func readValue<Key>(for key: Key.Type) throws -> Key.Value? where Key : StorageKit.StorageKey
+  public func write<Key>(_ value: Key.Value, forKey key: Key.Type) throws where Key : StorageKit.StorageKey
+}
+final public class InMemoryStorage : StorageKit.Storage, @unchecked Swift.Sendable {
+  public init()
+  final public func clear() throws
+  final public func deleteValue(for key: (some StorageKey).Type) throws
+  final public func readValue<Key>(for key: Key.Type) throws -> Key.Value? where Key : StorageKit.StorageKey
+  final public func write<Key>(_ value: Key.Value, forKey key: Key.Type) throws where Key : StorageKit.StorageKey
+  @objc deinit
+}
+public protocol ReadableStorage : Swift.Sendable {
+  func readValue<Key>(for key: Key.Type) throws -> Key.Value? where Key : StorageKit.StorageKey
+}
+public protocol WritableStorage : Swift.Sendable {
+  func clear() throws
+  func deleteValue(for key: (some StorageKey).Type) throws
+  func write<Key>(_ value: Key.Value, forKey key: Key.Type) throws where Key : StorageKit.StorageKey
+}
+public typealias Storage = StorageKit.ReadableStorage & StorageKit.WritableStorage
+public enum StorageError : Foundation.LocalizedError {
+  case clearFailed(any Swift.Error)
+  case deleteFailed(any Swift.Error)
+  case readFailed(any Swift.Error)
+  case writeFailed(any Swift.Error)
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+}
+public protocol StorageKey : Swift.Sendable {
+  associatedtype Value : Swift.Decodable, Swift.Encodable
+  static var name: Swift.String { get }
+}
+extension StorageKit.StorageKey {
+  public static var name: Swift.String {
+    get
+  }
+}
+final public class UserDefaultsStorage : StorageKit.Storage, @unchecked Swift.Sendable {
+  public init(userDefaults: Foundation.UserDefaults = .standard)
+  final public func clear() throws
+  final public func deleteValue(for key: (some StorageKey).Type) throws
+  final public func readValue<Key>(for key: Key.Type) throws -> Key.Value? where Key : StorageKit.StorageKey
+  final public func write<Key>(_ value: Key.Value, forKey key: Key.Type) throws where Key : StorageKit.StorageKey
+  @objc deinit
+}

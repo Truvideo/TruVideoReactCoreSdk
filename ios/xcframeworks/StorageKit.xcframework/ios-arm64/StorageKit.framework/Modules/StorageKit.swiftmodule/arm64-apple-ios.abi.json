@@ -1,0 +1,1520 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "StorageKit",
+    "printedName": "StorageKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileSystemStorage",
+        "printedName": "FileSystemStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(url:fileManager:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileSystemStorage",
+                "printedName": "StorageKit.FileSystemStorage",
+                "usr": "s:10StorageKit010FileSystemA0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FileManager",
+                "printedName": "Foundation.FileManager",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSFileManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10StorageKit010FileSystemA0V3url11fileManagerAC10Foundation3URLVSg_So06NSFileG0Ctcfc",
+            "mangledName": "$s10StorageKit010FileSystemA0V3url11fileManagerAC10Foundation3URLVSg_So06NSFileG0Ctcfc",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit010FileSystemA0V5clearyyKF",
+            "mangledName": "$s10StorageKit010FileSystemA0V5clearyyKF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteValue",
+            "printedName": "deleteValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit010FileSystemA0V11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit010FileSystemA0V11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readValue",
+            "printedName": "readValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit010FileSystemA0V9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit010FileSystemA0V9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit010FileSystemA0V5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "mangledName": "$s10StorageKit010FileSystemA0V5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10StorageKit010FileSystemA0V",
+        "mangledName": "$s10StorageKit010FileSystemA0V",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReadableStorage",
+            "printedName": "ReadableStorage",
+            "usr": "s:10StorageKit08ReadableA0P",
+            "mangledName": "$s10StorageKit08ReadableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "WritableStorage",
+            "printedName": "WritableStorage",
+            "usr": "s:10StorageKit08WritableA0P",
+            "mangledName": "$s10StorageKit08WritableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InMemoryStorage",
+        "printedName": "InMemoryStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InMemoryStorage",
+                "printedName": "StorageKit.InMemoryStorage",
+                "usr": "s:10StorageKit08InMemoryA0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10StorageKit08InMemoryA0CACycfc",
+            "mangledName": "$s10StorageKit08InMemoryA0CACycfc",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08InMemoryA0C5clearyyKF",
+            "mangledName": "$s10StorageKit08InMemoryA0C5clearyyKF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteValue",
+            "printedName": "deleteValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08InMemoryA0C11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit08InMemoryA0C11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readValue",
+            "printedName": "readValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08InMemoryA0C9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit08InMemoryA0C9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08InMemoryA0C5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "mangledName": "$s10StorageKit08InMemoryA0C5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10StorageKit08InMemoryA0C",
+        "mangledName": "$s10StorageKit08InMemoryA0C",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReadableStorage",
+            "printedName": "ReadableStorage",
+            "usr": "s:10StorageKit08ReadableA0P",
+            "mangledName": "$s10StorageKit08ReadableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "WritableStorage",
+            "printedName": "WritableStorage",
+            "usr": "s:10StorageKit08WritableA0P",
+            "mangledName": "$s10StorageKit08WritableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReadableStorage",
+        "printedName": "ReadableStorage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "readValue",
+            "printedName": "readValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_1_0.Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_1_0.Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_1_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08ReadableA0P9readValue3for0E0Qyd__Sgqd__m_tKAA0A3KeyRd__lF",
+            "mangledName": "$s10StorageKit08ReadableA0P9readValue3for0E0Qyd__Sgqd__m_tKAA0A3KeyRd__lF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : StorageKit.ReadableStorage, τ_1_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Self, Key where Self : StorageKit.ReadableStorage, Key : StorageKit.StorageKey>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:10StorageKit08ReadableA0P",
+        "mangledName": "$s10StorageKit08ReadableA0P",
+        "moduleName": "StorageKit",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WritableStorage",
+        "printedName": "WritableStorage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08WritableA0P5clearyyKF",
+            "mangledName": "$s10StorageKit08WritableA0P5clearyyKF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.WritableStorage>",
+            "sugared_genericSig": "<Self where Self : StorageKit.WritableStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteValue",
+            "printedName": "deleteValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_1_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08WritableA0P11deleteValue3foryqd__m_tKAA0A3KeyRd__lF",
+            "mangledName": "$s10StorageKit08WritableA0P11deleteValue3foryqd__m_tKAA0A3KeyRd__lF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : StorageKit.WritableStorage, τ_1_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Self where Self : StorageKit.WritableStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_1_0.Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_1_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit08WritableA0P5write_6forKeyy5ValueQyd___qd__mtKAA0aF0Rd__lF",
+            "mangledName": "$s10StorageKit08WritableA0P5write_6forKeyy5ValueQyd___qd__mtKAA0aF0Rd__lF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : StorageKit.WritableStorage, τ_1_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Self, Key where Self : StorageKit.WritableStorage, Key : StorageKit.StorageKey>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:10StorageKit08WritableA0P",
+        "mangledName": "$s10StorageKit08WritableA0P",
+        "moduleName": "StorageKit",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StorageError",
+        "printedName": "StorageError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "clearFailed",
+            "printedName": "clearFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StorageKit.StorageError.Type) -> (any Swift.Error) -> StorageKit.StorageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> StorageKit.StorageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StorageKit.StorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10StorageKit0A5ErrorO11clearFailedyACs0C0_pcACmF",
+            "mangledName": "$s10StorageKit0A5ErrorO11clearFailedyACs0C0_pcACmF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deleteFailed",
+            "printedName": "deleteFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StorageKit.StorageError.Type) -> (any Swift.Error) -> StorageKit.StorageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> StorageKit.StorageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StorageKit.StorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10StorageKit0A5ErrorO12deleteFailedyACs0C0_pcACmF",
+            "mangledName": "$s10StorageKit0A5ErrorO12deleteFailedyACs0C0_pcACmF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "readFailed",
+            "printedName": "readFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StorageKit.StorageError.Type) -> (any Swift.Error) -> StorageKit.StorageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> StorageKit.StorageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StorageKit.StorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10StorageKit0A5ErrorO10readFailedyACs0C0_pcACmF",
+            "mangledName": "$s10StorageKit0A5ErrorO10readFailedyACs0C0_pcACmF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "writeFailed",
+            "printedName": "writeFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StorageKit.StorageError.Type) -> (any Swift.Error) -> StorageKit.StorageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> StorageKit.StorageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StorageKit.StorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorageError",
+                        "printedName": "StorageKit.StorageError",
+                        "usr": "s:10StorageKit0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10StorageKit0A5ErrorO11writeFailedyACs0C0_pcACmF",
+            "mangledName": "$s10StorageKit0A5ErrorO11writeFailedyACs0C0_pcACmF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10StorageKit0A5ErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s10StorageKit0A5ErrorO16errorDescriptionSSSgvp",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10StorageKit0A5ErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s10StorageKit0A5ErrorO16errorDescriptionSSSgvg",
+                "moduleName": "StorageKit",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failureReason",
+            "printedName": "failureReason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10StorageKit0A5ErrorO13failureReasonSSSgvp",
+            "mangledName": "$s10StorageKit0A5ErrorO13failureReasonSSSgvp",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10StorageKit0A5ErrorO13failureReasonSSSgvg",
+                "mangledName": "$s10StorageKit0A5ErrorO13failureReasonSSSgvg",
+                "moduleName": "StorageKit",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10StorageKit0A5ErrorO",
+        "mangledName": "$s10StorageKit0A5ErrorO",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StorageKey",
+        "printedName": "StorageKey",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Value",
+            "printedName": "Value",
+            "declKind": "AssociatedType",
+            "usr": "s:10StorageKit0A3KeyP5ValueQa",
+            "mangledName": "$s10StorageKit0A3KeyP5ValueQa",
+            "moduleName": "StorageKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10StorageKit0A3KeyP4nameSSvpZ",
+            "mangledName": "$s10StorageKit0A3KeyP4nameSSvpZ",
+            "moduleName": "StorageKit",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10StorageKit0A3KeyP4nameSSvgZ",
+                "mangledName": "$s10StorageKit0A3KeyP4nameSSvgZ",
+                "moduleName": "StorageKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+                "sugared_genericSig": "<Self where Self : StorageKit.StorageKey>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10StorageKit0A3KeyPAAE4nameSSvpZ",
+            "mangledName": "$s10StorageKit0A3KeyPAAE4nameSSvpZ",
+            "moduleName": "StorageKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10StorageKit0A3KeyPAAE4nameSSvgZ",
+                "mangledName": "$s10StorageKit0A3KeyPAAE4nameSSvgZ",
+                "moduleName": "StorageKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+                "sugared_genericSig": "<Self where Self : StorageKit.StorageKey>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:10StorageKit0A3KeyP",
+        "mangledName": "$s10StorageKit0A3KeyP",
+        "moduleName": "StorageKit",
+        "genericSig": "<τ_0_0 : Swift.Sendable, τ_0_0.Value : Swift.Decodable, τ_0_0.Value : Swift.Encodable>",
+        "sugared_genericSig": "<Self : Swift.Sendable, Self.Value : Swift.Decodable, Self.Value : Swift.Encodable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserDefaultsStorage",
+        "printedName": "UserDefaultsStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userDefaults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsStorage",
+                "printedName": "StorageKit.UserDefaultsStorage",
+                "usr": "s:10StorageKit012UserDefaultsA0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10StorageKit012UserDefaultsA0C04userD0ACSo06NSUserD0C_tcfc",
+            "mangledName": "$s10StorageKit012UserDefaultsA0C04userD0ACSo06NSUserD0C_tcfc",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit012UserDefaultsA0C5clearyyKF",
+            "mangledName": "$s10StorageKit012UserDefaultsA0C5clearyyKF",
+            "moduleName": "StorageKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteValue",
+            "printedName": "deleteValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit012UserDefaultsA0C11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit012UserDefaultsA0C11deleteValue3foryxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readValue",
+            "printedName": "readValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit012UserDefaultsA0C9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "mangledName": "$s10StorageKit012UserDefaultsA0C9readValue3for0F0QzSgxm_tKAA0A3KeyRzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10StorageKit012UserDefaultsA0C5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "mangledName": "$s10StorageKit012UserDefaultsA0C5write_6forKeyy5ValueQz_xmtKAA0aG0RzlF",
+            "moduleName": "StorageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : StorageKit.StorageKey>",
+            "sugared_genericSig": "<Key where Key : StorageKit.StorageKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10StorageKit012UserDefaultsA0C",
+        "mangledName": "$s10StorageKit012UserDefaultsA0C",
+        "moduleName": "StorageKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReadableStorage",
+            "printedName": "ReadableStorage",
+            "usr": "s:10StorageKit08ReadableA0P",
+            "mangledName": "$s10StorageKit08ReadableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "WritableStorage",
+            "printedName": "WritableStorage",
+            "usr": "s:10StorageKit08WritableA0P",
+            "mangledName": "$s10StorageKit08WritableA0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Extended\/Storage\/Sources\/InMemory\/InMemoryStorage.swift",
+      "kind": "Dictionary",
+      "offset": 659,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

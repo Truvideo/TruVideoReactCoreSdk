@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DI
+@_exported import DI
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@propertyWrapper public struct Dependency<Value> : Swift.Sendable {
+  public var wrappedValue: Value {
+    get
+  }
+  public init(_ keyPath: any Swift.KeyPath<DI.DependencyValues, Value> & Swift.Sendable)
+}
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol DependencyKey<Value> : Swift.Sendable {
+  associatedtype Value : Swift.Sendable = Self
+  static var defaultValue: Self.Value { get }
+}
+#else
+public protocol DependencyKey : Swift.Sendable {
+  associatedtype Value : Swift.Sendable = Self
+  static var defaultValue: Self.Value { get }
+}
+#endif
+@_hasMissingDesignatedInitializers final public class DependencyValues : @unchecked Swift.Sendable {
+  public static let $current: _Concurrency.TaskLocal<DI.DependencyValues>
+  public static var current: DI.DependencyValues {
+    get
+  }
+  final public subscript<Key>(key: Key.Type) -> Key.Value where Key : DI.DependencyKey {
+    get
+    set
+  }
+  @objc deinit
+}
+#if compiler(>=5.3) && $OptionalIsolatedParameters && $ExpressionMacroDefaultArguments
+public func withDependencyValues<R>(_ operation: (DI.DependencyValues) async throws -> R, isolation: isolated (any _Concurrency.Actor)? = #isolation, file: Swift.String = #fileID, line: Swift.UInt = #line) async rethrows -> R
+#endif
+@propertyWrapper final public class Protected<Value> : @unchecked Swift.Sendable {
+  final public var wrappedValue: Value {
+    get
+    set
+  }
+  public init(_ value: Value)
+  public init(wrappedValue: Value)
+  @objc deinit
+}

@@ -1,0 +1,628 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Networking
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct CompositeMonitor : Networking.Monitor {
+  public init(monitors: [any Networking.Monitor])
+  public func requestDidCancel(_ request: any Networking.Request)
+  public func requestDidFinish(_ request: any Networking.Request)
+  public func requestDidResume(_ request: any Networking.Request)
+  public func requestDidSuspend(_ request: any Networking.Request)
+  public func requestIsFinishing(_ request: any Networking.Request)
+  public func requestIsPreparing(_ request: any Networking.Request)
+  public func requestIsRetrying(_ request: any Networking.Request)
+  public func request(_ request: any Networking.Request, didCancelTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didCompleteTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError?)
+  public func request(_ request: any Networking.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didCreateTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didFailTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToIntercept urlRequest: Foundation.URLRequest, with error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToCreateURLRequestWithError error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToCreateTaskWithError error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  public func request(_ request: any Networking.Request, didIntercept initialRequest: Foundation.URLRequest, to urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didResumeTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didSuspendTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didValidate urlRequest: Foundation.URLRequest?, data: Foundation.Data?, error: Networking.NetworkingError?)
+  public func request(_ request: any Networking.DataRequest, didParseResponse response: Networking.Response<Foundation.Data?, Networking.NetworkingError>)
+  public func request(_ request: any Networking.DataRequest, didParseResponse response: Networking.Response<some Sendable, Networking.NetworkingError>)
+  public func request(_ request: any Networking.UploadRequest, didCreateUploadable uploadable: Networking.HTTPURLUploadRequest.Uploadable)
+  public func request(_ request: any Networking.UploadRequest, didFailToCreateUploadableWithError error: Networking.NetworkingError)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+public struct HTTPHeader : Swift.Hashable, Swift.Sendable {
+  public let name: Swift.String
+  public let value: Swift.String
+  public static var defaultAcceptLanguage: Networking.HTTPHeader {
+    get
+  }
+  public static func acceptLanguage(_ value: Swift.String) -> Networking.HTTPHeader
+  public static func authorization(_ value: Swift.String) -> Networking.HTTPHeader
+  public static func bearerToken(_ value: Swift.String) -> Networking.HTTPHeader
+  public static func contentType(_ value: Swift.String) -> Networking.HTTPHeader
+  public init(name: Swift.String, value: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Networking.HTTPHeader, b: Networking.HTTPHeader) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HTTPHeaders : Swift.Hashable, Swift.Sendable {
+  public var dictionary: [Swift.String : Swift.String] {
+    get
+  }
+  public static var `default`: Networking.HTTPHeaders {
+    get
+  }
+  public subscript(name: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  public init(array: [Networking.HTTPHeader] = [])
+  public init(dictionary: [Swift.String : Swift.String])
+  public mutating func append(_ header: Networking.HTTPHeader)
+  public mutating func removeHeader(forKey key: Swift.String)
+  public mutating func setHeader(_ value: Swift.String, forKey key: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Networking.HTTPHeaders, b: Networking.HTTPHeaders) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Networking.HTTPHeaders : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Networking.HTTPHeader...)
+  public typealias ArrayLiteralElement = Networking.HTTPHeader
+}
+extension Networking.HTTPHeaders : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Swift.String)...)
+  public typealias Key = Swift.String
+  public typealias Value = Swift.String
+}
+extension Networking.HTTPHeaders : Swift.Collection {
+  public var endIndex: Swift.Int {
+    get
+  }
+  public var startIndex: Swift.Int {
+    get
+  }
+  public subscript(position: Swift.Int) -> Networking.HTTPHeader {
+    get
+  }
+  public func index(after indx: Swift.Int) -> Swift.Int
+  public typealias Element = Networking.HTTPHeader
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.DefaultIndices<Networking.HTTPHeaders>
+  public typealias Iterator = Swift.IndexingIterator<[Networking.HTTPHeader]>
+  public typealias SubSequence = Swift.Slice<Networking.HTTPHeaders>
+}
+extension Networking.HTTPHeaders : Swift.Sequence {
+  public func makeIterator() -> Swift.IndexingIterator<[Networking.HTTPHeader]>
+}
+public func + (lhs: Networking.HTTPHeaders, rhs: Networking.HTTPHeaders) -> Networking.HTTPHeaders
+public struct HTTPMethod : Swift.RawRepresentable, Swift.Hashable, Swift.Sendable {
+  public let rawValue: Swift.String
+  public static let delete: Networking.HTTPMethod
+  public static let get: Networking.HTTPMethod
+  public static let head: Networking.HTTPMethod
+  public static let options: Networking.HTTPMethod
+  public static let patch: Networking.HTTPMethod
+  public static let post: Networking.HTTPMethod
+  public static let put: Networking.HTTPMethod
+  public static let trace: Networking.HTTPMethod
+  public init(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+public protocol HTTPURLCache : Swift.Sendable {
+  func cachedResponse(for request: Networking.HTTPURLDataRequest) -> Networking.URLCachedResponse?
+  func cache(_ response: Networking.URLCachedResponse, for request: Networking.HTTPURLDataRequest)
+  func removeCachedResponse(for request: Networking.HTTPURLDataRequest)
+}
+extension Networking.HTTPURLCache where Self == Networking.InMemoryURLCache {
+  public static var inMemory: Networking.InMemoryURLCache {
+    get
+  }
+  public static func inMemory(capacity: Swift.Int) -> Networking.InMemoryURLCache
+}
+public struct InMemoryURLCache : Networking.HTTPURLCache, @unchecked Swift.Sendable {
+  public init(memoryCapacity: Swift.Int? = nil)
+  public func cachedResponse(for request: Networking.HTTPURLDataRequest) -> Networking.URLCachedResponse?
+  public func cache(_ response: Networking.URLCachedResponse, for request: Networking.HTTPURLDataRequest)
+  public func removeCachedResponse(for request: Networking.HTTPURLDataRequest)
+}
+@_hasMissingDesignatedInitializers public class HTTPURLDataRequest : Networking.HTTPURLRequest, Networking.DataRequest, @unchecked Swift.Sendable {
+  public typealias Validation = @Sendable (Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.Data?) throws -> Swift.Void
+  @Networking.Protected public var data: Foundation.Data? {
+    get
+  }
+  public func serializing<Value>(_ type: Value.Type, decoder: Foundation.JSONDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes) async -> Networking.Response<Value, Networking.NetworkingError> where Value : Swift.Decodable, Value : Swift.Sendable
+  public func serializingData(emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes) async -> Networking.Response<Foundation.Data, Networking.NetworkingError>
+  public func serializingString(queue: Dispatch.DispatchQueue = .main, encoding: Swift.String.Encoding = .utf8, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes) async -> Networking.Response<Swift.String, Networking.NetworkingError>
+  public func validate() -> Self
+  @discardableResult
+  public func validate(_ validator: @escaping Networking.HTTPURLDataRequest.Validation) -> Self
+  @discardableResult
+  public func validate<S>(acceptableStatusCodes: S) -> Self where S : Swift.Sendable, S : Swift.Sequence, S.Element == Swift.Int
+  @objc deinit
+}
+public protocol HTTPURLRequestDelegate : AnyObject, Swift.Sendable {
+  var sessionConfiguration: Foundation.URLSessionConfiguration { get }
+  func cleanup(_ request: Networking.HTTPURLRequest)
+  func retry(request: Networking.HTTPURLRequest, after delay: Foundation.TimeInterval)
+  func retry(request: Networking.HTTPURLRequest, failedWith error: Networking.NetworkingError) async -> Networking.RetryPolicy
+}
+@_hasMissingDesignatedInitializers public class HTTPURLRequest : @unchecked Swift.Sendable, Networking.Request {
+  final public let id: Foundation.UUID
+  weak public var delegate: (any Networking.HTTPURLRequestDelegate)? {
+    get
+  }
+  public var response: Foundation.HTTPURLResponse? {
+    get
+  }
+  final public let middleware: (any Networking.RequestMiddleware)?
+  final public let monitor: (any Networking.Monitor)?
+  @Networking.Protected public var error: Networking.NetworkingError? {
+    get
+  }
+  @Networking.Protected public var metrics: [Foundation.URLSessionTaskMetrics] {
+    get
+  }
+  @Networking.Protected public var retryCount: Swift.Int {
+    get
+  }
+  @Networking.Protected public var state: Networking.HTTPURLRequest.State {
+    get
+  }
+  @Networking.Protected public var tasks: [Foundation.URLSessionTask] {
+    get
+  }
+  public var request: Foundation.URLRequest? {
+    get
+  }
+  public enum State {
+    case cancelled
+    case finished
+    case finishing
+    case initialized
+    case resumed
+    case suspended
+    public static func == (a: Networking.HTTPURLRequest.State, b: Networking.HTTPURLRequest.State) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @discardableResult
+  public func cancel() -> Self
+  @discardableResult
+  public func resume() -> Self
+  @discardableResult
+  public func suspend() -> Self
+  @objc deinit
+}
+extension Networking.HTTPURLRequest : Swift.Equatable {
+  public static func == (lhs: Networking.HTTPURLRequest, rhs: Networking.HTTPURLRequest) -> Swift.Bool
+}
+extension Networking.HTTPURLRequest : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Networking.HTTPURLRequest {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+open class HTTPURLSession : @unchecked Swift.Sendable, Networking.Session {
+  final public let delegate: Networking.HTTPURLSessionDelegate
+  final public let middleware: (any Networking.RequestMiddleware)?
+  final public let monitor: (any Networking.Monitor)?
+  final public let queue: Dispatch.DispatchQueue
+  final public let session: Foundation.URLSession
+  public init(session: Foundation.URLSession, delegate: Networking.HTTPURLSessionDelegate, cache: (any Networking.HTTPURLCache)? = nil, middleware: (any Networking.RequestMiddleware)? = nil, monitors: [any Networking.Monitor] = [], queue: Dispatch.DispatchQueue = DispatchQueue(label: "com.networking.session.queue"))
+  convenience public init(configuration: Foundation.URLSessionConfiguration = .createDefault(), delegate: Networking.HTTPURLSessionDelegate = HTTPURLSessionDelegate(), cache: (any Networking.HTTPURLCache)? = nil, middleware: (any Networking.RequestMiddleware)? = nil, monitors: [any Networking.Monitor] = [], queue: Dispatch.DispatchQueue = DispatchQueue(label: "com.networking.session.queue"))
+  @objc deinit
+  public func cancelAllRequests()
+  open func request(_ url: any Networking.URLConvertible, method: Networking.HTTPMethod, parameters: Networking.Parameters?, encoder: any Networking.ParameterEncoder, headers: Networking.HTTPHeaders?, middleware: (any Networking.RequestMiddleware)?, cachePolicy: Networking.URLCachePolicy) -> any Networking.DataRequest
+  open func request(_ requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)?, cachePolicy: Networking.URLCachePolicy) -> any Networking.DataRequest
+  open func upload(_ data: Foundation.Data, to url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders?, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  open func upload(_ data: Foundation.Data, with requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, to url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders?, fileManager: Foundation.FileManager, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, with requestBuilder: any Networking.RequestBuilder, fileManager: Foundation.FileManager, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+}
+extension Networking.HTTPURLSession : Networking.HTTPURLRequestDelegate {
+  public var sessionConfiguration: Foundation.URLSessionConfiguration {
+    get
+  }
+  public enum RetryError : Foundation.LocalizedError {
+    case retryFailed(error: any Swift.Error, originalError: any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public func cleanup(_ request: Networking.HTTPURLRequest)
+  public func retry(request: Networking.HTTPURLRequest, after delay: Foundation.TimeInterval)
+  public func retry(request: Networking.HTTPURLRequest, failedWith error: Networking.NetworkingError) async -> Networking.RetryPolicy
+}
+@objc @_inheritsConvenienceInitializers open class HTTPURLSessionDelegate : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Networking.HTTPURLSessionDelegate : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+}
+extension Networking.HTTPURLSessionDelegate : Foundation.URLSessionDataDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
+}
+extension Networking.HTTPURLSessionDelegate : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+@_hasMissingDesignatedInitializers public class HTTPURLUploadRequest : Networking.HTTPURLDataRequest, Networking.UploadRequest, @unchecked Swift.Sendable {
+  final public let fileManager: Foundation.FileManager?
+  public var uploadable: Networking.HTTPURLUploadRequest.Uploadable?
+  final public let uploadableBuilder: any Networking.UploadableBuilder
+  public enum Uploadable : @unchecked Swift.Sendable {
+    case data(Foundation.Data)
+    case file(Foundation.URL, shouldRemove: Swift.Bool)
+    case stream(Foundation.InputStream)
+  }
+  @objc deinit
+}
+public protocol Monitor : Swift.Sendable {
+  var queue: Dispatch.DispatchQueue { get }
+  func requestDidCancel(_ request: any Networking.Request)
+  func requestDidFinish(_ request: any Networking.Request)
+  func requestDidResume(_ request: any Networking.Request)
+  func requestDidSuspend(_ request: any Networking.Request)
+  func requestIsFinishing(_ request: any Networking.Request)
+  func requestIsPreparing(_ request: any Networking.Request)
+  func requestIsRetrying(_ request: any Networking.Request)
+  func request(_ request: any Networking.Request, didCancelTask task: Foundation.URLSessionTask)
+  func request(_ request: any Networking.Request, didCompleteTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError?)
+  func request(_ request: any Networking.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  func request(_ request: any Networking.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  func request(_ request: any Networking.Request, didCreateTask task: Foundation.URLSessionTask)
+  func request(_ request: any Networking.Request, didFailTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError)
+  func request(_ request: any Networking.Request, didFailToIntercept urlRequest: Foundation.URLRequest, with error: Networking.NetworkingError)
+  func request(_ request: any Networking.Request, didFailToCreateURLRequestWithError error: Networking.NetworkingError)
+  func request(_ request: any Networking.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  func request(_ request: any Networking.Request, didIntercept initialRequest: Foundation.URLRequest, to urlRequest: Foundation.URLRequest)
+  func request(_ request: any Networking.Request, didResumeTask task: Foundation.URLSessionTask)
+  func request(_ request: any Networking.Request, didSuspendTask task: Foundation.URLSessionTask)
+  func request(_ request: any Networking.Request, didValidate urlRequest: Foundation.URLRequest?, data: Foundation.Data?, error: Networking.NetworkingError?)
+  func request(_ request: any Networking.DataRequest, didParseResponse response: Networking.Response<some Sendable, Networking.NetworkingError>)
+  func request(_ request: any Networking.UploadRequest, didCreateUploadable uploadable: Networking.HTTPURLUploadRequest.Uploadable)
+  func request(_ request: any Networking.UploadRequest, didFailToCreateUploadableWithError error: Networking.NetworkingError)
+  func request(_ request: any Networking.Request, didFailToCreateTaskWithError error: Networking.NetworkingError)
+  func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+extension Networking.Monitor {
+  public var queue: Dispatch.DispatchQueue {
+    get
+  }
+  public func requestDidCancel(_ request: any Networking.Request)
+  public func requestDidFinish(_ request: any Networking.Request)
+  public func requestDidResume(_ request: any Networking.Request)
+  public func requestDidSuspend(_ request: any Networking.Request)
+  public func requestIsFinishing(_ request: any Networking.Request)
+  public func requestIsPreparing(_ request: any Networking.Request)
+  public func requestIsRetrying(_ request: any Networking.Request)
+  public func request(_ request: any Networking.Request, didCancelTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didCompleteTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError?)
+  public func request(_ request: any Networking.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didCreateTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didFailTask task: Foundation.URLSessionTask, with error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToIntercept urlRequest: Foundation.URLRequest, with error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToCreateURLRequestWithError error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  public func request(_ request: any Networking.Request, didIntercept initialRequest: Foundation.URLRequest, to urlRequest: Foundation.URLRequest)
+  public func request(_ request: any Networking.Request, didResumeTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didSuspendTask task: Foundation.URLSessionTask)
+  public func request(_ request: any Networking.Request, didValidate urlRequest: Foundation.URLRequest?, data: Foundation.Data?, error: Networking.NetworkingError?)
+  public func request(_ request: any Networking.DataRequest, didParseResponse response: Networking.Response<some Sendable, Networking.NetworkingError>)
+  public func request(_ request: any Networking.UploadRequest, didCreateUploadable uploadable: Networking.HTTPURLUploadRequest.Uploadable)
+  public func request(_ request: any Networking.UploadRequest, didFailToCreateUploadableWithError error: Networking.NetworkingError)
+  public func request(_ request: any Networking.Request, didFailToCreateTaskWithError error: Networking.NetworkingError)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+public struct NetworkingError : Foundation.LocalizedError, Swift.Sendable {
+  public let column: Swift.Int
+  public let failureReason: Swift.String?
+  public let kind: Networking.NetworkingError.ErrorKind
+  public let line: Swift.Int
+  public let underlyingError: (any Swift.Error)?
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public enum ErrorKind : Swift.Equatable, Swift.Sendable {
+    case createUploadableFailed
+    case explicitlyCancelled
+    case invalidURL
+    case parameterEncodingFailed
+    case requestCreationFailed
+    case requestInterceptationFailed
+    case requestRetryFailed
+    case responseSerializationFailed
+    case responseValidationFailed
+    case sessionInvalidated
+    case sessionTaskFailed
+    case urlRequestValidationFailed
+    case unknown
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: Networking.NetworkingError.ErrorKind, b: Networking.NetworkingError.ErrorKind) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(kind: Networking.NetworkingError.ErrorKind, underlyingError: (any Swift.Error)? = nil, column: Swift.Int = #column, line: Swift.Int = #line)
+  public init(kind: Networking.NetworkingError.ErrorKind, failureReason: Swift.String, column: Swift.Int = #column, line: Swift.Int = #line)
+}
+public typealias Parameters = [Swift.String : any Swift.Sendable]
+public protocol ParameterEncoder : Swift.Sendable {
+  func encode(_ parameters: Networking.Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest
+}
+public struct JSONParameterEncoder : Networking.ParameterEncoder {
+  public static var prettyPrinted: Networking.JSONParameterEncoder {
+    get
+  }
+  public static var sortedKeys: Networking.JSONParameterEncoder {
+    get
+  }
+  public init(options: Foundation.JSONSerialization.WritingOptions = [])
+  public func encode(_ parameters: Networking.Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest
+}
+extension Networking.ParameterEncoder where Self == Networking.JSONParameterEncoder {
+  public static var json: Networking.JSONParameterEncoder {
+    get
+  }
+  public static func json(options: Foundation.JSONSerialization.WritingOptions = []) -> Networking.JSONParameterEncoder
+}
+public struct URLParameterEncoder : Networking.ParameterEncoder {
+  public enum ParameterDestination : Swift.Sendable {
+    case auto
+    case body
+    case query
+    public static func == (a: Networking.URLParameterEncoder.ParameterDestination, b: Networking.URLParameterEncoder.ParameterDestination) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(destination: Networking.URLParameterEncoder.ParameterDestination = .auto)
+  public func encode(_ parameters: Networking.Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest
+}
+extension Networking.ParameterEncoder where Self == Networking.URLParameterEncoder {
+  public static var url: Networking.URLParameterEncoder {
+    get
+  }
+}
+@propertyWrapper final public class Protected<Value> : @unchecked Swift.Sendable {
+  final public var wrappedValue: Value {
+    get
+    set
+  }
+  public init(_ value: Value)
+  public init(wrappedValue: Value)
+  @objc deinit
+}
+public protocol Request : Swift.CustomDebugStringConvertible, Swift.Hashable {
+  var request: Foundation.URLRequest? { get }
+  var response: Foundation.HTTPURLResponse? { get }
+  var retryCount: Swift.Int { get }
+  @discardableResult
+  func cancel() -> Self
+  @discardableResult
+  func resume() -> Self
+  @discardableResult
+  func suspend() -> Self
+}
+public protocol DataRequest : Networking.Request {
+  typealias Validation = @Sendable (Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.Data?) throws -> Swift.Void
+  func serializing<Value>(_ type: Value.Type, decoder: Foundation.JSONDecoder, emptyResponseCodes: Swift.Set<Swift.Int>) async -> Networking.Response<Value, Networking.NetworkingError> where Value : Swift.Decodable, Value : Swift.Sendable
+  func serializingData(emptyResponseCodes: Swift.Set<Swift.Int>) async -> Networking.Response<Foundation.Data, Networking.NetworkingError>
+  func serializingString(queue: Dispatch.DispatchQueue, encoding: Swift.String.Encoding, emptyResponseCodes: Swift.Set<Swift.Int>) async -> Networking.Response<Swift.String, Networking.NetworkingError>
+  func validate() -> Self
+  @discardableResult
+  func validate(_ validator: @escaping Self.Validation) -> Self
+  @discardableResult
+  func validate<S>(acceptableStatusCodes: S) -> Self where S : Swift.Sendable, S : Swift.Sequence, S.Element == Swift.Int
+}
+public protocol UploadRequest : Networking.DataRequest {
+}
+extension Networking.DataRequest {
+  public func serializing<Value>(_ type: Value.Type, decoder: Foundation.JSONDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.emptyResponseCodes) async -> Networking.Response<Value, Networking.NetworkingError> where Value : Swift.Decodable, Value : Swift.Sendable
+  public func serializingData(emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes) async -> Networking.Response<Foundation.Data, Networking.NetworkingError>
+  public func serializingString(queue: Dispatch.DispatchQueue = .main, encoding: Swift.String.Encoding = .utf8, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes) async -> Networking.Response<Swift.String, Networking.NetworkingError>
+}
+public enum RetryPolicy : Swift.Sendable {
+  case doNotRetry
+  case doNotRetryWithError(any Swift.Error)
+  case retry(Foundation.TimeInterval)
+}
+public protocol RequestRetrier {
+  func retry(_ request: any Networking.Request, for session: any Networking.Session, failedWith error: any Swift.Error) async -> Networking.RetryPolicy
+}
+public protocol RequestInterceptor {
+  func intercept(_ request: Foundation.URLRequest, for session: any Networking.Session) async throws -> Foundation.URLRequest
+}
+public protocol RequestMiddleware : Networking.RequestInterceptor, Networking.RequestRetrier {
+}
+extension Networking.RequestRetrier {
+  public func retry(_ request: any Networking.Request, for session: any Networking.Session, failedWith error: any Swift.Error) async -> Networking.RetryPolicy
+}
+public struct Middleware : Networking.RequestMiddleware {
+  public let interceptors: [any Networking.RequestInterceptor]
+  public let retriers: [any Networking.RequestRetrier]
+  public init(interceptors: [any Networking.RequestInterceptor], retriers: [any Networking.RequestRetrier])
+  public func intercept(_ request: Foundation.URLRequest, for session: any Networking.Session) async throws -> Foundation.URLRequest
+  public func retry(_ request: any Networking.Request, for session: any Networking.Session, failedWith error: any Swift.Error) async -> Networking.RetryPolicy
+}
+public struct Response<Success, Failure> : Swift.Sendable where Success : Swift.Sendable, Failure : Swift.Error {
+  public let data: Foundation.Data?
+  public let metrics: Foundation.URLSessionTaskMetrics?
+  public let request: Foundation.URLRequest?
+  public let response: Foundation.HTTPURLResponse?
+  public let result: Swift.Result<Success, Failure>
+  public let type: Networking.ResponseType
+  public var error: Failure? {
+    get
+  }
+  public var value: Success? {
+    get
+  }
+  public init(data: Foundation.Data?, metrics: Foundation.URLSessionTaskMetrics?, request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, result: Swift.Result<Success, Failure>, type: Networking.ResponseType)
+  public func map<NewSuccess>(_ transform: (Success) -> NewSuccess) -> Networking.Response<NewSuccess, Failure> where NewSuccess : Swift.Sendable
+}
+extension Networking.Response : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum ResponseType : Swift.Sendable {
+  case localCache
+  case networkLoad
+  public static func == (a: Networking.ResponseType, b: Networking.ResponseType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Serializer : Swift.Sendable {
+  associatedtype SerializedObject : Swift.Sendable
+  var emptyResponseCodes: Swift.Set<Swift.Int> { get }
+  func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+extension Networking.Serializer {
+  public static var emptyResponseCodes: Swift.Set<Swift.Int> {
+    get
+  }
+}
+public struct DataResponseSerializer : Networking.Serializer {
+  public let emptyResponseCodes: Swift.Set<Swift.Int>
+  public init(emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes)
+  public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Foundation.Data
+  public typealias SerializedObject = Foundation.Data
+}
+public struct Empty : Swift.Codable, Swift.Equatable, Swift.Sendable {
+  public static let value: Networking.Empty
+  public static func == (a: Networking.Empty, b: Networking.Empty) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DecodableResponseSerializer<T> : Networking.Serializer where T : Swift.Decodable, T : Swift.Sendable {
+  public let decoder: Foundation.JSONDecoder
+  public let emptyResponseCodes: Swift.Set<Swift.Int>
+  public init(decoder: Foundation.JSONDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.emptyResponseCodes)
+  public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> T
+  public typealias SerializedObject = T
+}
+public struct StringResponseSerializer : Networking.Serializer {
+  public let emptyResponseCodes: Swift.Set<Swift.Int>
+  public let encoding: Swift.String.Encoding
+  public init(encoding: Swift.String.Encoding = .utf8, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.emptyResponseCodes)
+  public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Swift.String
+  public typealias SerializedObject = Swift.String
+}
+public protocol URLConvertible {
+  func asURL() throws -> Foundation.URL
+}
+public protocol RequestBuilder {
+  func build() throws -> Foundation.URLRequest
+}
+public protocol UploadableBuilder {
+  func createUploadable() throws -> Networking.HTTPURLUploadRequest.Uploadable
+}
+extension Networking.HTTPURLUploadRequest.Uploadable : Networking.UploadableBuilder {
+  public func createUploadable() throws -> Networking.HTTPURLUploadRequest.Uploadable
+}
+public protocol UploadRequestBuilder : Networking.RequestBuilder, Networking.UploadableBuilder {
+}
+public protocol Session : Swift.Sendable {
+  func cancelAllRequests()
+  func request(_ url: any Networking.URLConvertible, method: Networking.HTTPMethod, parameters: Networking.Parameters?, encoder: any Networking.ParameterEncoder, headers: Networking.HTTPHeaders?, middleware: (any Networking.RequestMiddleware)?, cachePolicy: Networking.URLCachePolicy) -> any Networking.DataRequest
+  func request(_ requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)?, cachePolicy: Networking.URLCachePolicy) -> any Networking.DataRequest
+  func upload(_ data: Foundation.Data, to url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders?, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  func upload(_ data: Foundation.Data, with requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  func upload(_ fileURL: Foundation.URL, to url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders?, fileManager: Foundation.FileManager, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+  func upload(_ fileURL: Foundation.URL, with requestBuilder: any Networking.RequestBuilder, fileManager: Foundation.FileManager, middleware: (any Networking.RequestMiddleware)?) -> any Networking.UploadRequest
+}
+extension Networking.Session {
+  public func request(_ url: any Networking.URLConvertible, method: Networking.HTTPMethod = .get, parameters: Networking.Parameters? = nil, encoder: any Networking.ParameterEncoder = .url, headers: Networking.HTTPHeaders? = nil, middleware: (any Networking.RequestMiddleware)? = nil, cachePolicy: Networking.URLCachePolicy = .reloadIgnoringLocalCacheData) -> any Networking.DataRequest
+  public func request(_ requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)? = nil, cachePolicy: Networking.URLCachePolicy = .reloadIgnoringLocalCacheData) -> any Networking.DataRequest
+  public func upload(_ data: Foundation.Data, to url: any Networking.URLConvertible, method: Networking.HTTPMethod = .post, headers: Networking.HTTPHeaders? = nil, middleware: (any Networking.RequestMiddleware)? = nil) -> any Networking.UploadRequest
+  public func upload(_ data: Foundation.Data, with requestBuilder: any Networking.RequestBuilder, middleware: (any Networking.RequestMiddleware)? = nil) -> any Networking.UploadRequest
+  public func upload(_ fileURL: Foundation.URL, to url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders? = nil, fileManager: Foundation.FileManager = FileManager.default, middleware: (any Networking.RequestMiddleware)? = nil) -> any Networking.UploadRequest
+  public func upload(_ fileURL: Foundation.URL, with requestBuilder: any Networking.RequestBuilder, fileManager: Foundation.FileManager = FileManager.default, middleware: (any Networking.RequestMiddleware)? = nil) -> any Networking.UploadRequest
+}
+extension Swift.String : Networking.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URL : Networking.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+public enum URLCachePolicy : Swift.Sendable {
+  case reloadIgnoringLocalCacheData
+  case returnCacheDataDontLoad
+  case returnCacheDataElseLoad
+  public static func == (a: Networking.URLCachePolicy, b: Networking.URLCachePolicy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct URLCachedResponse {
+  public let data: Foundation.Data
+  public let response: Foundation.HTTPURLResponse
+}
+extension Foundation.URLComponents : Networking.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URLRequest {
+  public var allHTTPHeaders: Networking.HTTPHeaders {
+    get
+    set
+  }
+  public var method: Networking.HTTPMethod {
+    get
+  }
+  public init(url: any Networking.URLConvertible, method: Networking.HTTPMethod, headers: Networking.HTTPHeaders? = nil) throws
+}
+extension Foundation.URLSessionConfiguration {
+  public var headers: Networking.HTTPHeaders {
+    get
+    set
+  }
+  public static func createDefault() -> Foundation.URLSessionConfiguration
+}
+extension Networking.HTTPURLRequest.State : Swift.Equatable {}
+extension Networking.HTTPURLRequest.State : Swift.Hashable {}
+extension Networking.NetworkingError.ErrorKind : Swift.Hashable {}
+extension Networking.URLParameterEncoder.ParameterDestination : Swift.Equatable {}
+extension Networking.URLParameterEncoder.ParameterDestination : Swift.Hashable {}
+extension Networking.ResponseType : Swift.Equatable {}
+extension Networking.ResponseType : Swift.Hashable {}
+extension Networking.URLCachePolicy : Swift.Equatable {}
+extension Networking.URLCachePolicy : Swift.Hashable {}

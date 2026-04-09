@@ -1,0 +1,799 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "DI",
+    "printedName": "DI",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dependency",
+        "printedName": "Dependency",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2DI10DependencyV12wrappedValuexvp",
+            "mangledName": "$s2DI10DependencyV12wrappedValuexvp",
+            "moduleName": "DI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI10DependencyV12wrappedValuexvg",
+                "mangledName": "$s2DI10DependencyV12wrappedValuexvg",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dependency",
+                "printedName": "DI.Dependency<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:2DI10DependencyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "any Swift.KeyPath<DI.DependencyValues, τ_0_0> & Swift.Sendable"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2DI10DependencyVyACyxGs8Sendable_s7KeyPathCyAA0B6ValuesCxGXccfc",
+            "mangledName": "$s2DI10DependencyVyACyxGs8Sendable_s7KeyPathCyAA0B6ValuesCxGXccfc",
+            "moduleName": "DI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2DI10DependencyV",
+        "mangledName": "$s2DI10DependencyV",
+        "moduleName": "DI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DependencyKey",
+        "printedName": "DependencyKey",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Value",
+            "printedName": "Value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "AssociatedType",
+            "usr": "s:2DI13DependencyKeyP5ValueQa",
+            "mangledName": "$s2DI13DependencyKeyP5ValueQa",
+            "moduleName": "DI",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "defaultValue",
+            "printedName": "defaultValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Value"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2DI13DependencyKeyP12defaultValue0E0QzvpZ",
+            "mangledName": "$s2DI13DependencyKeyP12defaultValue0E0QzvpZ",
+            "moduleName": "DI",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI13DependencyKeyP12defaultValue0E0QzvgZ",
+                "mangledName": "$s2DI13DependencyKeyP12defaultValue0E0QzvgZ",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0 where τ_0_0 : DI.DependencyKey>",
+                "sugared_genericSig": "<Self where Self : DI.DependencyKey>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:2DI13DependencyKeyP",
+        "mangledName": "$s2DI13DependencyKeyP",
+        "moduleName": "DI",
+        "genericSig": "<τ_0_0 : Swift.Sendable, τ_0_0.Value : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable, Self.Value : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DependencyValues",
+        "printedName": "DependencyValues",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "current",
+            "printedName": "current",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependencyValues",
+                "printedName": "DI.DependencyValues",
+                "usr": "s:2DI16DependencyValuesC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2DI16DependencyValuesC7currentACvpZ",
+            "mangledName": "$s2DI16DependencyValuesC7currentACvpZ",
+            "moduleName": "DI",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependencyValues",
+                    "printedName": "DI.DependencyValues",
+                    "usr": "s:2DI16DependencyValuesC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI16DependencyValuesC7currentACvgZ",
+                "mangledName": "$s2DI16DependencyValuesC7currentACvgZ",
+                "moduleName": "DI",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluip",
+            "mangledName": "$s2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluip",
+            "moduleName": "DI",
+            "genericSig": "<τ_0_0 where τ_0_0 : DI.DependencyKey>",
+            "sugared_genericSig": "<Key where Key : DI.DependencyKey>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "τ_0_0.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluig",
+                "mangledName": "$s2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluig",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0 where τ_0_0 : DI.DependencyKey>",
+                "sugared_genericSig": "<Key where Key : DI.DependencyKey>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "τ_0_0.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluis",
+                "mangledName": "$s2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluis",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0 where τ_0_0 : DI.DependencyKey>",
+                "sugared_genericSig": "<Key where Key : DI.DependencyKey>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "τ_0_0.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluiM",
+                "mangledName": "$s2DI16DependencyValuesCy5ValueQzxmcAA0B3KeyRzluiM",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0 where τ_0_0 : DI.DependencyKey>",
+                "sugared_genericSig": "<Key where Key : DI.DependencyKey>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2DI16DependencyValuesC",
+        "mangledName": "$s2DI16DependencyValuesC",
+        "moduleName": "DI",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "withDependencyValues",
+        "printedName": "withDependencyValues(_:isolation:file:line:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "GenericTypeParam",
+            "printedName": "τ_0_0"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(DI.DependencyValues) async throws -> τ_0_0",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependencyValues",
+                "printedName": "DI.DependencyValues",
+                "usr": "s:2DI16DependencyValuesC"
+              }
+            ],
+            "typeAttributes": [
+              "noescape"
+            ]
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "(any _Concurrency.Actor)?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Actor",
+                "printedName": "any _Concurrency.Actor",
+                "usr": "s:ScA"
+              }
+            ],
+            "hasDefaultArg": true,
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "hasDefaultArg": true,
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UInt",
+            "printedName": "Swift.UInt",
+            "hasDefaultArg": true,
+            "usr": "s:Su"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:2DI20withDependencyValues_9isolation4file4linexxAA0cD0CYaKXE_ScA_pSgYiSSSutYaKlF",
+        "mangledName": "$s2DI20withDependencyValues_9isolation4file4linexxAA0cD0CYaKXE_ScA_pSgYiSSSutYaKlF",
+        "moduleName": "DI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<R>",
+        "declAttributes": [
+          "Rethrows",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Protected",
+        "printedName": "Protected",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2DI9ProtectedC12wrappedValuexvp",
+            "mangledName": "$s2DI9ProtectedC12wrappedValuexvp",
+            "moduleName": "DI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI9ProtectedC12wrappedValuexvg",
+                "mangledName": "$s2DI9ProtectedC12wrappedValuexvg",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI9ProtectedC12wrappedValuexvs",
+                "mangledName": "$s2DI9ProtectedC12wrappedValuexvs",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2DI9ProtectedC12wrappedValuexvM",
+                "mangledName": "$s2DI9ProtectedC12wrappedValuexvM",
+                "moduleName": "DI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Protected",
+                "printedName": "DI.Protected<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:2DI9ProtectedC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2DI9ProtectedCyACyxGxcfc",
+            "mangledName": "$s2DI9ProtectedCyACyxGxcfc",
+            "moduleName": "DI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(wrappedValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Protected",
+                "printedName": "DI.Protected<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:2DI9ProtectedC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2DI9ProtectedC12wrappedValueACyxGx_tcfc",
+            "mangledName": "$s2DI9ProtectedC12wrappedValueACyxGx_tcfc",
+            "moduleName": "DI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2DI9ProtectedC",
+        "mangledName": "$s2DI9ProtectedC",
+        "moduleName": "DI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "PropertyWrapper",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/truvideo-ios-sdk\/truvideo-ios-sdk\/Libraries\/Foundation\/Core\/DI\/Sources\/DependencyValues\/DependencyValues.swift",
+      "kind": "Dictionary",
+      "offset": 518,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

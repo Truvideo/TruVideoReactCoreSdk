@@ -4,8 +4,3 @@ framework module TruvideoSdk {
 
   module * { export * }
 }
-
-module TruvideoSdk.Swift {
-  header "TruvideoSdk-Swift.h"
-  requires objc
-}

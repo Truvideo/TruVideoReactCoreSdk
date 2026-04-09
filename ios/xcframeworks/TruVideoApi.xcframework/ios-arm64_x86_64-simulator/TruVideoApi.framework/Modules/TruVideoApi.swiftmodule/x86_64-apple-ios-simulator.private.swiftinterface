@@ -1,0 +1,324 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TruVideoApi
+import CryptoKit
+import DI
+import Foundation
+import Swift
+import TruVideoFoundation
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AuthToken : Swift.Codable, Swift.Sendable {
+  public let id: Foundation.UUID
+  public let accessToken: Swift.String
+  public let refreshToken: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol AuthenticatableClient {
+  var currentSession: TruVideoApi.AuthSession? { get }
+  #if compiler(>=5.3) && $TypedThrows
+  func authenticate(apiKey: Swift.String, context: TruVideoApi.Context, signature: Swift.String, externalId: Swift.String?) async throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func refreshToken() async throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func signOut() throws(TruVideoFoundation.UtilityError)
+  #endif
+}
+extension TruVideoApi.AuthenticatableClient {
+  #if compiler(>=5.3) && $TypedThrows
+  public func authenticate(apiKey: Swift.String, context: TruVideoApi.Context, signature: Swift.String) async throws(TruVideoFoundation.UtilityError)
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class AuthenticationClient : TruVideoApi.AuthenticatableClient {
+  final public var currentSession: TruVideoApi.AuthSession? {
+    get
+  }
+  convenience public init()
+  #if compiler(>=5.3) && $TypedThrows
+  final public func authenticate(apiKey: Swift.String, context: TruVideoApi.Context, signature: Swift.String, externalId: Swift.String?) async throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  final public func refreshToken() async throws(TruVideoFoundation.UtilityError)
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  final public func signOut() throws(TruVideoFoundation.UtilityError)
+  #endif
+  @objc deinit
+}
+public struct Context : Swift.Codable, Swift.Sendable {
+  public let brand: Swift.String
+  public let model: Swift.String
+  public let os: Swift.String
+  public let osVersion: Swift.String
+  public let timestamp: Swift.Int
+  public init(brand: Swift.String, model: Swift.String, os: Swift.String, osVersion: Swift.String, timestamp: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension DI.DependencyValues {
+  final public var sessionManager: any TruVideoApi.SessionManager {
+    get
+    set
+  }
+}
+public struct DeviceSetting : Swift.Codable, Swift.Sendable {
+  public let isAutoPlayEnabled: Swift.Bool
+  public let isCameraModuleEnabled: Swift.Bool
+  public let isNoiseCancellingEnabled: Swift.Bool
+  public let isStreamingUploadEnabled: Swift.Bool
+  public let s3Configuration: TruVideoApi.DeviceSetting.S3Configuration
+  public struct S3Configuration : Swift.Codable, Swift.Sendable {
+    public let bucketName: Swift.String
+    public let bucketForLogs: Swift.String
+    public let bucketForMedia: Swift.String
+    public let identityId: Swift.String
+    public let identityPoolId: Swift.String
+    public let newBucketFolderForLogs: Swift.String
+    public let newBucketFolderForMedia: Swift.String
+    public let region: Swift.String
+    public init(bucketName: Swift.String, bucketForLogs: Swift.String, bucketForMedia: Swift.String, identityId: Swift.String, identityPoolId: Swift.String, newBucketFolderForLogs: Swift.String, newBucketFolderForMedia: Swift.String, region: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(isAutoPlayEnabled: Swift.Bool, isCameraModuleEnabled: Swift.Bool, isNoiseCancellingEnabled: Swift.Bool, isStreamingUploadEnabled: Swift.Bool, s3Configuration: TruVideoApi.DeviceSetting.S3Configuration)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension TruVideoFoundation.ErrorReason {
+  public struct DeviceSettingsErrorReason : Swift.Sendable {
+    public static let deviceSettingsRetrievalFailed: TruVideoFoundation.ErrorReason
+    public static let unauthenticated: TruVideoFoundation.ErrorReason
+  }
+}
+public protocol DeviceSettingsResource : Swift.Sendable {
+  #if compiler(>=5.3) && $TypedThrows
+  func retrieve() async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.DeviceSetting
+  #endif
+}
+public struct DeviceSettingsResourceImpl : TruVideoApi.DeviceSettingsResource {
+  public init()
+  #if compiler(>=5.3) && $TypedThrows
+  public func retrieve() async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.DeviceSetting
+  #endif
+}
+@_spi(Internal) public struct Environment : Swift.Hashable, Swift.RawRepresentable, Swift.Sendable {
+  @_spi(Internal) public let rawValue: Swift.String
+  @_spi(Internal) public static let beta: TruVideoApi.Environment
+  @_spi(Internal) public static let dev: TruVideoApi.Environment
+  @_spi(Internal) public static let prod: TruVideoApi.Environment
+  @_spi(Internal) public static let rc: TruVideoApi.Environment
+  @_spi(Internal) public init(rawValue: Swift.String)
+  @_spi(Internal) public typealias RawValue = Swift.String
+}
+@_spi(Internal) public struct EnvironmentDependencyKey : DI.DependencyKey {
+  @_spi(Internal) public static let defaultValue: TruVideoApi.Environment
+  @_spi(Internal) public typealias Value = TruVideoApi.Environment
+}
+extension DI.DependencyValues {
+  @_spi(Internal) final public var environment: TruVideoApi.Environment {
+    get
+    set
+  }
+}
+public struct Media : Swift.Codable, Swift.Identifiable, Swift.Sendable {
+  public let id: Foundation.UUID
+  public let active: Swift.Bool
+  public let createdDate: Foundation.Date
+  public let duration: Swift.Int?
+  public let includeInReport: Swift.Bool
+  public let isLibrary: Swift.Bool
+  public let metadata: TruVideoFoundation.Metadata
+  public let previewUrl: Foundation.URL?
+  public let sanitizedTitle: Swift.String
+  public let tags: [Swift.String : Swift.String]
+  public let thumbnailUrl: Foundation.URL?
+  public let title: Swift.String?
+  public let transcriptionLength: Swift.Double
+  public let transcriptionUrl: Foundation.URL?
+  public let type: TruVideoApi.MediaType
+  public let url: Foundation.URL
+  public static let empty: TruVideoApi.Media
+  public init(from decoder: any Swift.Decoder) throws
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias ID = Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum MediaResolution : Swift.String, Swift.Codable, Swift.Sendable {
+  case low
+  case medium
+  case high
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension TruVideoFoundation.ErrorReason {
+  public struct MediaResourceErrorReason : Swift.Sendable {
+    public static let createMediaFailed: TruVideoFoundation.ErrorReason
+    public static let findMediaFailed: TruVideoFoundation.ErrorReason
+    public static let searchMediaFailed: TruVideoFoundation.ErrorReason
+    public static let updateMediaFailed: TruVideoFoundation.ErrorReason
+  }
+}
+public protocol MediaResource {
+  #if compiler(>=5.3) && $TypedThrows
+  func create(_ parameters: TruVideoApi.SaveMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func find(for id: Foundation.UUID) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func search(with parameters: TruVideoApi.SearchMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.PaginatedResponse<TruVideoApi.Media>
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  func update(for id: Swift.String, with parameters: TruVideoApi.SaveMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+}
+public struct MediaResourceImpl : TruVideoApi.MediaResource {
+  public init()
+  #if compiler(>=5.3) && $TypedThrows
+  public func create(_ parameters: TruVideoApi.SaveMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  public func find(for id: Foundation.UUID) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  public func search(with parameters: TruVideoApi.SearchMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.PaginatedResponse<TruVideoApi.Media>
+  #endif
+  #if compiler(>=5.3) && $TypedThrows
+  public func update(for id: Swift.String, with parameters: TruVideoApi.SaveMediaParameters) async throws(TruVideoFoundation.UtilityError) -> TruVideoApi.Media
+  #endif
+}
+public enum MediaType : Swift.String, Swift.Codable, Swift.Sendable {
+  case video
+  case image
+  case audio
+  case document
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PaginatedResponse<Content> : Swift.Decodable where Content : Swift.Decodable {
+  public let content: [Content]
+  public let empty: Swift.Bool
+  public let first: Swift.Bool
+  public let last: Swift.Bool
+  public let number: Swift.Int
+  public let numberOfElements: Swift.Int
+  public let size: Swift.Int
+  public let totalElements: Swift.Int
+  public let totalPages: Swift.Int
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SaveMediaParameters {
+  public let duration: Swift.Int?
+  public let includeInReport: Swift.Bool?
+  public let isLibrary: Swift.Bool?
+  public let metadata: TruVideoFoundation.Metadata?
+  public let resolution: TruVideoApi.MediaResolution?
+  public let size: Swift.Int
+  public let tags: [Swift.String : Swift.String]?
+  public let title: Swift.String
+  public let type: TruVideoApi.MediaType
+  public let url: Swift.String
+  public init(size: Swift.Int, title: Swift.String, type: TruVideoApi.MediaType, url: Swift.String, duration: Swift.Int? = nil, includeInReport: Swift.Bool?, isLibrary: Swift.Bool? = nil, metadata: TruVideoFoundation.Metadata? = nil, resolution: TruVideoApi.MediaResolution? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+final public class SearchMediaParameters {
+  public enum SortBy : Swift.String, Swift.Codable, Swift.Sendable {
+    case createdDate
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct RequestParameters {
+    public let bodyParameters: [Swift.String : any Swift.Sendable]
+    public let queryParameters: Swift.String
+  }
+  public enum SortDirection : Swift.String, Swift.Codable, Swift.Sendable {
+    case ascending
+    case descending
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init()
+  final public func build() -> TruVideoApi.SearchMediaParameters.RequestParameters
+  @discardableResult
+  final public func direction(_ direction: TruVideoApi.SearchMediaParameters.SortDirection) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func ids(_ ids: [Swift.String]) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func isActive(_ value: Swift.Bool) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func isLibrary(_ value: Swift.Bool) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func page(_ value: Swift.Int) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func pageSize(_ value: Swift.Int) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func searchTerm(_ value: Swift.String) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func sortedBy(_ value: TruVideoApi.SearchMediaParameters.SortBy) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func tags(_ value: [Swift.String : Swift.String]) -> TruVideoApi.SearchMediaParameters
+  @discardableResult
+  final public func type(_ value: TruVideoApi.MediaType) -> TruVideoApi.SearchMediaParameters
+  @objc deinit
+}
+public struct AuthSession : Swift.Codable, Swift.Sendable {
+  public let apiKey: Swift.String
+  public let authToken: TruVideoApi.AuthToken
+  public init(apiKey: Swift.String, authToken: TruVideoApi.AuthToken)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol SessionManager : Swift.Sendable {
+  var currentSession: TruVideoApi.AuthSession? { get }
+  func deleteCurrentSession() throws
+  func set(_ session: TruVideoApi.AuthSession) throws
+}
+@_hasMissingDesignatedInitializers final public class SecureSessionManager : TruVideoApi.SessionManager, @unchecked Swift.Sendable {
+  final public var currentSession: TruVideoApi.AuthSession? {
+    get
+  }
+  convenience public init(secretKey: Swift.String)
+  final public func deleteCurrentSession() throws
+  final public func set(_ session: TruVideoApi.AuthSession) throws
+  @objc deinit
+}
+extension TruVideoFoundation.ErrorReason {
+  public struct TruVideoApiErrorReason : Swift.Sendable {
+    public static let authenticationFailed: TruVideoFoundation.ErrorReason
+    public static let invalidApiKey: TruVideoFoundation.ErrorReason
+    public static let invalidSignature: TruVideoFoundation.ErrorReason
+    public static let refreshTokenFailed: TruVideoFoundation.ErrorReason
+    public static let signFailed: TruVideoFoundation.ErrorReason
+    public static let signOutFailed: TruVideoFoundation.ErrorReason
+  }
+}
+extension TruVideoApi.MediaResolution : Swift.Equatable {}
+extension TruVideoApi.MediaResolution : Swift.Hashable {}
+extension TruVideoApi.MediaResolution : Swift.RawRepresentable {}
+extension TruVideoApi.MediaType : Swift.Equatable {}
+extension TruVideoApi.MediaType : Swift.Hashable {}
+extension TruVideoApi.MediaType : Swift.RawRepresentable {}
+extension TruVideoApi.SearchMediaParameters.SortBy : Swift.Equatable {}
+extension TruVideoApi.SearchMediaParameters.SortBy : Swift.Hashable {}
+extension TruVideoApi.SearchMediaParameters.SortBy : Swift.RawRepresentable {}
+extension TruVideoApi.SearchMediaParameters.SortDirection : Swift.Equatable {}
+extension TruVideoApi.SearchMediaParameters.SortDirection : Swift.Hashable {}
+extension TruVideoApi.SearchMediaParameters.SortDirection : Swift.RawRepresentable {}
