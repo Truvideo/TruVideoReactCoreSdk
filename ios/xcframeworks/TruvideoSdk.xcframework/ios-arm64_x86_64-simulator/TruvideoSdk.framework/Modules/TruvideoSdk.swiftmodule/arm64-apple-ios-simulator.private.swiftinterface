@@ -4,12 +4,36 @@
 import CommonCrypto
 import Foundation
 import Swift
-@_spi(Internal) import TruVideoApi
 @_exported import TruvideoSdk
 import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_spi(Internal) public struct Configuration : Swift.Hashable, Swift.Sendable {
+  @_spi(Internal) public let isAutoPlayEnabled: Swift.Bool
+  @_spi(Internal) public let isCameraModuleEnabled: Swift.Bool
+  @_spi(Internal) public let isNoiseCancellingEnabled: Swift.Bool
+  @_spi(Internal) public let isStreamingUploadEnabled: Swift.Bool
+  @_spi(Internal) public let s3Configuration: TruvideoSdk.Configuration.AWSS3
+  @_spi(Internal) public struct AWSS3 : Swift.Hashable, Swift.Sendable {
+    @_spi(Internal) public let bucketName: Swift.String
+    @_spi(Internal) public let identityId: Swift.String
+    @_spi(Internal) public let identityPoolId: Swift.String
+    @_spi(Internal) public let logsFolderPath: Swift.String
+    @_spi(Internal) public let mediasFolderPath: Swift.String
+    @_spi(Internal) public let region: Swift.String
+    @_spi(Internal) public func hash(into hasher: inout Swift.Hasher)
+    @_spi(Internal) public static func == (a: TruvideoSdk.Configuration.AWSS3, b: TruvideoSdk.Configuration.AWSS3) -> Swift.Bool
+    @_spi(Internal) public var hashValue: Swift.Int {
+      @_spi(Internal) get
+    }
+  }
+  @_spi(Internal) public func hash(into hasher: inout Swift.Hasher)
+  @_spi(Internal) public static func == (a: TruvideoSdk.Configuration, b: TruvideoSdk.Configuration) -> Swift.Bool
+  @_spi(Internal) public var hashValue: Swift.Int {
+    @_spi(Internal) get
+  }
+}
 public struct Context : Swift.Codable, Swift.Sendable {
   public let brand: Swift.String
   public let model: Swift.String
@@ -42,9 +66,9 @@ extension TruvideoSdk.TruVideoSdkError {
 }
 public protocol TruVideoSDK {
   @_spi(Internal) var authToken: Swift.String? { get }
+  @_spi(Internal) var configuration: TruvideoSdk.Configuration { get }
   @_spi(Internal) var environment: TruvideoSdk.Environment { get }
   var isAuthenticated: Swift.Bool { get }
-  @_spi(Internal) var deviceSetting: TruVideoApi.DeviceSetting { get }
   var options: TruvideoSdk.TruVideoOptions { get }
   func authenticate(apiKey: Swift.String, secretKey: Swift.String, externalId: Swift.String?) async throws
   func configure(with options: TruvideoSdk.TruVideoOptions)
