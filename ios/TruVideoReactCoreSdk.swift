@@ -119,6 +119,157 @@ class TruVideoReactCoreSdk: NSObject {
       }
     }
   }
+  
+  // MARK: - generateOtp
+  @objc(generateOtp:withApiKey:withSecret:withExternalId:withResolver:withRejecter:)
+  func generateOtp(
+    baseUrl: String,
+    apiKey: String,
+    secret: String,
+    externalId: String,
+    resolve: @escaping RCTPromiseResolveBlock,
+    reject: @escaping RCTPromiseRejectBlock
+  ) -> Void {
+    ensureConfigured()
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      do {
+        if apiKey.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+          throw NSError(domain: "OTP_GENERATE_ERROR", code: 400, userInfo: [
+            NSLocalizedDescriptionKey: "apiKey cannot be empty"
+          ])
+        }
+
+        if secret.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+          throw NSError(domain: "OTP_GENERATE_ERROR", code: 400, userInfo: [
+            NSLocalizedDescriptionKey: "secret cannot be empty"
+          ])
+        }
+
+        if externalId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+          throw NSError(domain: "OTP_GENERATE_ERROR", code: 400, userInfo: [
+            NSLocalizedDescriptionKey: "externalId cannot be empty"
+          ])
+        }
+
+        let cleanBaseUrl = baseUrl.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        let endpoint = "\(cleanBaseUrl)/api/v1/auth/otp/generate"
+
+        guard let url = URL(string: endpoint) else {
+          throw NSError(domain: "OTP_GENERATE_ERROR", code: 400, userInfo: [
+            NSLocalizedDescriptionKey: "Invalid baseUrl"
+          ])
+        }
+
+        let bodyDict: [String: Any] = [
+          "externalId": externalId
+        ]
+
+        let bodyData = try JSONSerialization.data(withJSONObject: bodyDict, options: [])
+        guard let bodyString = String(data: bodyData, encoding: .utf8) else {
+          throw NSError(domain: "OTP_GENERATE_ERROR", code: 500, userInfo: [
+            NSLocalizedDescriptionKey: "Failed to create request body"
+          ])
+        }
+
+        let signature = bodyString.toSha256String(using: secret)
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.timeoutInterval = 15
+        request.httpBody = bodyData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(apiKey, forHTTPHeaderField: "x-authentication-api-key")
+        request.setValue(signature, forHTTPHeaderField: "x-authentication-signature")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+          if let error = error {
+            DispatchQueue.main.async {
+              reject("OTP_GENERATE_ERROR", error.localizedDescription, error)
+            }
+            return
+          }
+
+          let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
+          let responseData = data ?? Data()
+
+          if statusCode < 200 || statusCode > 299 {
+            var message = "OTP generate failed with status \(statusCode)"
+
+            if let json = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any] {
+              if let msg = json["message"] as? String, !msg.isEmpty {
+                message = "OTP generate failed (\(statusCode)): \(msg)"
+              } else if let detail = json["detail"] as? String, !detail.isEmpty {
+                message = "OTP generate failed (\(statusCode)): \(detail)"
+              }
+            }
+
+            DispatchQueue.main.async {
+              reject("OTP_GENERATE_ERROR", message, nil)
+            }
+            return
+          }
+
+          guard
+            let json = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any],
+            let otp = json["otp"] as? String,
+            !otp.isEmpty
+          else {
+            DispatchQueue.main.async {
+              reject("OTP_GENERATE_ERROR", "OTP not found in response", nil)
+            }
+            return
+          }
+
+          DispatchQueue.main.async {
+            resolve(otp)
+          }
+        }.resume()
+
+      } catch let error {
+        DispatchQueue.main.async {
+          reject("OTP_GENERATE_ERROR", error.localizedDescription, error)
+        }
+      }
+    }
+  }
+
+  // MARK: - authenticateWithOtp
+  @objc(authenticateWithOtp:withResolver:withRejecter:)
+  func authenticateWithOtp(
+    otp: String,
+    resolve: @escaping RCTPromiseResolveBlock,
+    reject: @escaping RCTPromiseRejectBlock
+  ) -> Void {
+    ensureConfigured()
+
+    Task {
+      do {
+        if otp.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+          throw NSError(
+            domain: "OTP_AUTH_ERROR",
+            code: 400,
+            userInfo: [NSLocalizedDescriptionKey: "OTP cannot be empty"]
+          )
+        }
+
+        try await TruvideoSdk.authenticate(otp: otp)
+
+        DispatchQueue.main.async {
+          resolve("OTP Authentication Successful")
+        }
+
+      } catch let error {
+        print("[TruVideoSDK] OTP auth error:", error.localizedDescription)
+
+        DispatchQueue.main.async {
+          reject("OTP_AUTH_ERROR", error.localizedDescription, error)
+        }
+      }
+    }
+  }
+  
+  
 }
 
 // MARK: - SHA256 Extension
@@ -147,3 +298,6 @@ extension String {
     return macData.map { String(format: "%02x", $0) }.joined()
   }
 }
+
+
+

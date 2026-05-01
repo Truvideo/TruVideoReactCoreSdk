@@ -69,3 +69,22 @@ export function initAuthentication(): Promise<string> {
 export function clearAuthentication(): Promise<string> {
   return TruVideoReactCoreSdk.clearAuthentication();
 }
+
+
+export function generateOtp(
+  baseUrl: string,
+  apiKey: string,
+  secret: string,
+  externalId: string
+): Promise<string> {
+  return TruVideoReactCoreSdk.generateOtp(
+    baseUrl,
+    apiKey,
+    secret,
+    externalId
+  );
+}
+
+export function authenticateWithOtp(otp: string): Promise<string> {
+  return TruVideoReactCoreSdk.authenticateWithOtp(otp);
+}

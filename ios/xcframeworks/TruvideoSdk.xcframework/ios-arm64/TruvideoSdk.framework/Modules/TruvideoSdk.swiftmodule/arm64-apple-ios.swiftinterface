@@ -34,9 +34,10 @@ public protocol TruVideoSDK {
   var isAuthenticated: Swift.Bool { get }
   var options: TruvideoSdk.TruVideoOptions { get }
   func authenticate(apiKey: Swift.String, secretKey: Swift.String, externalId: Swift.String?) async throws
+  func authenticate(otp: Swift.String) async throws
   func configure(with options: TruvideoSdk.TruVideoOptions)
   func signOut() throws
-  @available(*, deprecated, message: "Use TruVideoSDK.options.apiKey instead.")
+  @available(*, deprecated, message: "Deprecated. The TruVideo SDK does not expose the application API key through public APIs—retain.")
   func apiKey() throws -> Swift.String
   @available(*, deprecated, message: "Use TruVideoSDK.authenticate() instead.")
   func authenticate(apiKey: Swift.String, payload: Swift.String, signature: Swift.String, externalId: Swift.String?) async throws
@@ -64,6 +65,7 @@ public struct TruVideoSdkError : Foundation.LocalizedError {
   public static let authenticationFailed: TruvideoSdk.TruVideoSdkError
   public static let configurationRequired: TruvideoSdk.TruVideoSdkError
   public static let failedToRefreshToken: TruvideoSdk.TruVideoSdkError
+  public static let otpAuthenticationFailed: TruvideoSdk.TruVideoSdkError
   public static let signOutFailed: TruvideoSdk.TruVideoSdkError
   public static let unknown: TruvideoSdk.TruVideoSdkError
   public struct ErrorReason : Swift.Equatable, Swift.RawRepresentable {
@@ -72,6 +74,7 @@ public struct TruVideoSdkError : Foundation.LocalizedError {
     public static let configurationRequired: TruvideoSdk.TruVideoSdkError.ErrorReason
     public static let invalidApiKey: TruvideoSdk.TruVideoSdkError.ErrorReason
     public static let invalidSignature: TruvideoSdk.TruVideoSdkError.ErrorReason
+    public static let otpAuthenticationFailed: TruvideoSdk.TruVideoSdkError.ErrorReason
     public static let unknown: TruvideoSdk.TruVideoSdkError.ErrorReason
     public init(rawValue: Swift.String)
     public typealias RawValue = Swift.String

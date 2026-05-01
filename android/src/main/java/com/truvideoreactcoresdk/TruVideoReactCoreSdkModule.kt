@@ -7,15 +7,25 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.truvideo.sdk.core.TruvideoSdk
 import com.truvideo.sdk.core.interfaces.TruvideoSdkCallback
+import com.truvideo.sdk.model.exceptions.TruvideoSdkException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import truvideo.sdk.common.exceptions.TruvideoSdkException
+//import truvideo.sdk.common.exceptions.TruvideoSdkException
 import java.security.InvalidKeyException
 import java.security.NoSuchAlgorithmException
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
+import kotlin.coroutines.Continuation
+import kotlin.coroutines.EmptyCoroutineContext
+import kotlin.coroutines.startCoroutine
 
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
@@ -26,12 +36,12 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun isAuthenticated(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticated())
+    promise.resolve(TruvideoSdk.isAuthenticated)
   }
-  @ReactMethod
-  fun isAuthenticationExpired(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticationExpired())
-  }
+//  @ReactMethod
+//  fun isAuthenticationExpired(promise: Promise){
+//    promise.resolve(TruvideoSdk.isAuthenticationExpired())
+//  }
 //  @ReactMethod
 //  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
 //    scope.launch {
@@ -41,7 +51,7 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun generatePayload(promise: Promise){
-    promise.resolve(TruvideoSdk.generatePayload().toString())
+    promise.resolve(TruvideoSdk.generatePayload())
   }
 
   @ReactMethod
@@ -49,14 +59,13 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
     TruvideoSdk.authenticate(
       apiKey = apiKey,
       payload = payload,
-      signature = signature!!,
+      signature = signature,
       externalId = externalId, object : TruvideoSdkCallback<Unit> {
-        override fun onComplete(unit: Unit) {
+        override fun onComplete(result: Unit) {
           promise.resolve("Authenticate Successful")
         }
-
-        override fun onError(@NonNull e: TruvideoSdkException) {
-          promise.reject(e.toString())
+        override fun onError(exception: TruvideoSdkException) {
+          promise.reject("AUTH_ERROR", exception.toString())
         }
       }
     )
@@ -64,29 +73,28 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   }
 
-  @ReactMethod
-  fun initAuthentication(promise: Promise){
-    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
-      override fun onComplete(result: Unit) {
-        promise.resolve("Init Successful")
-      }
-
-      override fun onError(exception: TruvideoSdkException) {
-        promise.reject(exception.toString())
-      }
-    })
-
-
-  }
+//  @ReactMethod
+//  fun initAuthentication(promise: Promise){
+//    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
+//      override fun onComplete(result: Unit) {
+//        promise.resolve("Init Successful")
+//      }
+//
+//      override fun onError(exception: TruvideoSdkException) {
+//        promise.reject(exception.toString())
+//      }
+//    })
+//
+//  }
 
   // Authentication function
   suspend fun authenticate(apiKey: String, secretKey: String,extenalId : String, promise: Promise) {
     try {
       // Check if user is authenticated
-      val isAuthenticated = TruvideoSdk.isAuthenticated()
+      val isAuthenticated = TruvideoSdk.isAuthenticated
       // Check if authentication token has expired
-      val isAuthenticationExpired = TruvideoSdk.isAuthenticationExpired()
-      if (!isAuthenticated || isAuthenticationExpired) {
+//      val isAuthenticationExpired = TruvideoSdk.isAuthenticationExpired()
+      if (!isAuthenticated) {
         // get API key and secret key
         // generate payload for authentication
         val payload = TruvideoSdk.generatePayload()
@@ -101,7 +109,7 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
         )
       }
       // If user is authenticated successfully
-      TruvideoSdk.initAuthentication()
+//      TruvideoSdk.initAuthentication()
       promise.resolve("Authentication Successful")
       // Authentication ready
       // Truvideo SDK its ready to be used
@@ -141,10 +149,158 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   }
 
   // Logout function
+//  @ReactMethod
+//  fun clearAuthentication(promise: Promise) {
+//    TruvideoSdk.clearAuthentication()
+//    promise.resolve("Logout Successful")
+//  }
+
   @ReactMethod
   fun clearAuthentication(promise: Promise) {
-    TruvideoSdk.clearAuthentication()
-    promise.resolve("Logout Successful")
+    suspend {
+      TruvideoSdk.clearAuthentication()
+    }.startCoroutine(
+      object : Continuation<Unit> {
+        override val context = EmptyCoroutineContext
+        override fun resumeWith(result: kotlin.Result<Unit>) {
+          result
+            .onSuccess {
+              promise.resolve("Logout Successful")
+            }
+            .onFailure { exception ->
+              promise.reject("CLEAR_AUTHENTICATION_ERROR", exception.toString())
+            }
+        }
+      }
+    )
+  }
+
+// generate OTP
+
+  @ReactMethod
+  fun generateOtp(
+    baseUrl: String,
+    apiKey: String,
+    secret: String,
+    externalId: String,
+    promise: Promise
+  ) {
+    scope.launch(Dispatchers.IO) {
+      try {
+        if (apiKey.isBlank()) throw IllegalArgumentException("apiKey cannot be empty")
+        if (secret.isBlank()) throw IllegalArgumentException("secret cannot be empty")
+        if (externalId.isBlank()) throw IllegalArgumentException("externalId cannot be empty")
+
+        val cleanBaseUrl = baseUrl.trimEnd('/')
+        val endpoint = "$cleanBaseUrl/api/v1/auth/otp/generate"
+
+        val body = JSONObject()
+          .put("externalId", externalId)
+          .toString()
+
+        val signature = toSha256String(secret, body)
+          ?: throw IllegalStateException("Failed to generate request signature")
+
+        val connection = (URL(endpoint).openConnection() as HttpURLConnection).apply {
+          requestMethod = "POST"
+          connectTimeout = 15_000
+          readTimeout = 15_000
+          doOutput = true
+
+          setRequestProperty("Content-Type", "application/json")
+          setRequestProperty("x-authentication-api-key", apiKey)
+          setRequestProperty("x-authentication-signature", signature)
+        }
+
+        try {
+          connection.outputStream.use {
+            it.write(body.toByteArray(Charsets.UTF_8))
+          }
+
+          val status = connection.responseCode
+
+          val stream = if (status in 200..299) {
+            connection.inputStream
+          } else {
+            connection.errorStream
+          }
+
+          val responseText = stream?.use {
+            BufferedReader(InputStreamReader(it)).readText()
+          }.orEmpty()
+
+          if (status !in 200..299) {
+            val msg = runCatching {
+              JSONObject(responseText).optString("message")
+                .ifBlank { JSONObject(responseText).optString("detail") }
+            }.getOrDefault("")
+
+            throw IllegalStateException(
+              if (msg.isNotBlank()) {
+                "OTP generate failed ($status): $msg"
+              } else {
+                "OTP generate failed with status $status"
+              }
+            )
+          }
+
+          val otp = runCatching {
+            JSONObject(responseText).optString("otp")
+          }.getOrDefault("")
+
+          if (otp.isBlank()) {
+            throw IllegalStateException("OTP not found in response")
+          }
+
+          withContext(Dispatchers.Main) {
+            promise.resolve(otp)
+          }
+
+        } finally {
+          connection.disconnect()
+        }
+
+      } catch (e: Exception) {
+        e.printStackTrace()
+
+        withContext(Dispatchers.Main) {
+          promise.reject("OTP_GENERATE_ERROR", e.message, e)
+        }
+      }
+    }
+  }
+
+  // authenticate otp
+
+  @ReactMethod
+  fun authenticateWithOtp(
+    otp: String,
+    promise: Promise
+  ) {
+    scope.launch(Dispatchers.IO) {
+      try {
+        if (otp.isBlank()) {
+          throw IllegalArgumentException("OTP cannot be empty")
+        }
+
+        // Call suspend SDK function
+        TruvideoSdk.authenticate(otp)
+
+        // Wait until SDK is fully ready
+        TruvideoSdk.waitAuthReady()
+
+        withContext(Dispatchers.Main) {
+          promise.resolve("OTP Authentication Successful")
+        }
+
+      } catch (e: Exception) {
+        e.printStackTrace()
+
+        withContext(Dispatchers.Main) {
+          promise.reject("OTP_AUTH_ERROR", e.message, e)
+        }
+      }
+    }
   }
 
   companion object {
