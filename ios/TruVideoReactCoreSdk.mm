@@ -24,6 +24,17 @@ RCT_EXTERN_METHOD(initAuthentication:(RCTPromiseResolveBlock)resolve
 RCT_EXTERN_METHOD(clearAuthentication:(RCTPromiseResolveBlock)resolve
                 withRejecter:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(generateOtp:(NSString *)baseUrl
+                 withApiKey:(NSString *)apiKey
+                 withSecret:(NSString *)secret
+                 withExternalId:(NSString *)externalId
+                 withResolver:(RCTPromiseResolveBlock)resolve
+                 withRejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(authenticateWithOtp:(NSString *)otp
+                withResolver:(RCTPromiseResolveBlock)resolve
+                withRejecter:(RCTPromiseRejectBlock)reject)
+                
 + (BOOL)requiresMainQueueSetup
 {
   return NO;
