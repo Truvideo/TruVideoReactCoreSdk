@@ -5,7 +5,6 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.truvideo.sdk.core.TruvideoSdk
 import com.truvideo.sdk.core.interfaces.TruvideoSdkCallback
 import com.truvideo.sdk.model.exceptions.TruvideoSdkException
 import kotlinx.coroutines.CoroutineScope
@@ -30,18 +29,24 @@ import java.net.URL
 class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
   private val scope = CoroutineScope(Dispatchers.Main)
+  private val sdk by lazy {
+    val sdkClass = Class.forName("com.truvideo.sdk.core.TruvideoSdk")
+    val getInstance = sdkClass.getDeclaredMethod("getInstance")
+    getInstance.invoke(null) as com.truvideo.sdk.model.TruvideoSdkInterface
+  }
+
   override fun getName(): String {
     return NAME
   }
 
   @ReactMethod
   fun isAuthenticated(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticated)
+    promise.resolve(sdk.isAuthenticated)
   }
 
   @ReactMethod
   fun isAuthenticationExpired(promise: Promise){
-    promise.resolve(TruvideoSdk.isAuthenticationExpired())
+    promise.resolve(!sdk.isAuthenticated)
   }
 //  @ReactMethod
 //  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
@@ -52,19 +57,21 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun generatePayload(promise: Promise){
-    promise.resolve(TruvideoSdk.generatePayload())
+    promise.resolve(sdk.generatePayload())
   }
 
   @ReactMethod
   fun authenticate(apiKey : String, payload : String, signature : String, externalId :String,promise: Promise){
-    TruvideoSdk.authenticate(
-      apiKey = apiKey,
-      payload = payload,
-      signature = signature,
-      externalId = externalId, object : TruvideoSdkCallback<Unit> {
+    sdk.authenticate(
+      apiKey,
+      payload,
+      signature,
+      externalId,
+      object : TruvideoSdkCallback<Unit> {
         override fun onComplete(result: Unit) {
           promise.resolve("Authenticate Successful")
         }
+
         override fun onError(exception: TruvideoSdkException) {
           promise.reject("AUTH_ERROR", exception.toString())
         }
@@ -76,37 +83,35 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun initAuthentication(promise: Promise){
-    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
-      override fun onComplete(result: Unit) {
-        promise.resolve("Init Authentication Successfully")
+    scope.launch(Dispatchers.IO) {
+      try {
+        sdk.waitAuthReady()
+        withContext(Dispatchers.Main) {
+          promise.resolve("Init Authentication Successfully")
+        }
+      } catch (exception: Exception) {
+        withContext(Dispatchers.Main) {
+          promise.reject("INIT_AUTH_ERROR", exception.toString())
+        }
       }
-
-      override fun onError(exception: TruvideoSdkException) {
-        promise.reject("INIT_AUTH_ERROR", exception.toString())
-      }
-    })
+    }
   }
 
   // Authentication function
   suspend fun authenticate(apiKey: String, secretKey: String,extenalId : String, promise: Promise) {
     try {
       // Check if user is authenticated
-      val isAuthenticated = TruvideoSdk.isAuthenticated
+      val isAuthenticated = sdk.isAuthenticated
       // Check if authentication token has expired
 //      val isAuthenticationExpired = TruvideoSdk.isAuthenticationExpired()
       if (!isAuthenticated) {
         // get API key and secret key
         // generate payload for authentication
-        val payload = TruvideoSdk.generatePayload()
+        val payload = sdk.generatePayload()
         // generate SHA-256 hash of payload with signature as secret key
         val signature = toSha256String(secretKey, payload)
         // Authenticate user
-        TruvideoSdk.authenticate(
-          apiKey = apiKey,
-          payload = payload,
-          signature = signature!!,
-          externalId = extenalId
-        )
+        sdk.authenticate(apiKey, payload, signature!!, extenalId)
       }
       // If user is authenticated successfully
 //      TruvideoSdk.initAuthentication()
@@ -157,22 +162,18 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun clearAuthentication(promise: Promise) {
-    suspend {
-      TruvideoSdk.clearAuthentication()
-    }.startCoroutine(
-      object : Continuation<Unit> {
-        override val context = EmptyCoroutineContext
-        override fun resumeWith(result: kotlin.Result<Unit>) {
-          result
-            .onSuccess {
-              promise.resolve("Logout Successful")
-            }
-            .onFailure { exception ->
-              promise.reject("CLEAR_AUTHENTICATION_ERROR", exception.toString())
-            }
+    scope.launch(Dispatchers.IO) {
+      try {
+        sdk.clearAuthentication()
+        withContext(Dispatchers.Main) {
+          promise.resolve("Logout Successful")
+        }
+      } catch (exception: Exception) {
+        withContext(Dispatchers.Main) {
+          promise.reject("CLEAR_AUTHENTICATION_ERROR", exception.toString())
         }
       }
-    )
+    }
   }
 
 // generate OTP
@@ -284,10 +285,10 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
         }
 
         // Call suspend SDK function
-        TruvideoSdk.authenticate(otp)
+        sdk.authenticate(otp)
 
         // Wait until SDK is fully ready
-        TruvideoSdk.waitAuthReady()
+        sdk.waitAuthReady()
 
         withContext(Dispatchers.Main) {
           promise.resolve("OTP Authentication Successful")
