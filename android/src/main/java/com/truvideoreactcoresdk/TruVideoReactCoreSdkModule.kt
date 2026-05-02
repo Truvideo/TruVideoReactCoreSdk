@@ -38,10 +38,11 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
   fun isAuthenticated(promise: Promise){
     promise.resolve(TruvideoSdk.isAuthenticated)
   }
-//  @ReactMethod
-//  fun isAuthenticationExpired(promise: Promise){
-//    promise.resolve(TruvideoSdk.isAuthenticationExpired())
-//  }
+
+  @ReactMethod
+  fun isAuthenticationExpired(promise: Promise){
+    promise.resolve(TruvideoSdk.isAuthenticationExpired())
+  }
 //  @ReactMethod
 //  fun authentication(apiKey : String , secretKey : String,extenalId: String, promise: Promise) {
 //    scope.launch {
@@ -73,19 +74,18 @@ class TruVideoReactCoreSdkModule(reactContext: ReactApplicationContext) :
 
   }
 
-//  @ReactMethod
-//  fun initAuthentication(promise: Promise){
-//    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
-//      override fun onComplete(result: Unit) {
-//        promise.resolve("Init Successful")
-//      }
-//
-//      override fun onError(exception: TruvideoSdkException) {
-//        promise.reject(exception.toString())
-//      }
-//    })
-//
-//  }
+  @ReactMethod
+  fun initAuthentication(promise: Promise){
+    TruvideoSdk.initAuthentication(object : TruvideoSdkCallback<Unit>{
+      override fun onComplete(result: Unit) {
+        promise.resolve("Init Authentication Successfully")
+      }
+
+      override fun onError(exception: TruvideoSdkException) {
+        promise.reject("INIT_AUTH_ERROR", exception.toString())
+      }
+    })
+  }
 
   // Authentication function
   suspend fun authenticate(apiKey: String, secretKey: String,extenalId : String, promise: Promise) {
