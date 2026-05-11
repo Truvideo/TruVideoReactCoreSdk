@@ -194,15 +194,11 @@ class TruVideoReactCoreSdk: NSObject {
           let responseData = data ?? Data()
 
           if statusCode < 200 || statusCode > 299 {
-            var message = "OTP generate failed with status \(statusCode)"
-
-            if let json = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any] {
-              if let msg = json["message"] as? String, !msg.isEmpty {
-                message = "OTP generate failed (\(statusCode)): \(msg)"
-              } else if let detail = json["detail"] as? String, !detail.isEmpty {
-                message = "OTP generate failed (\(statusCode)): \(detail)"
-              }
-            }
+            let message = self.buildOtpGenerateErrorMessage(
+              statusCode: statusCode,
+              responseData: responseData,
+              response: response as? HTTPURLResponse
+            )
 
             DispatchQueue.main.async {
               reject("OTP_GENERATE_ERROR", message, nil)
@@ -232,6 +228,49 @@ class TruVideoReactCoreSdk: NSObject {
         }
       }
     }
+  }
+
+  private func buildOtpGenerateErrorMessage(
+    statusCode: Int,
+    responseData: Data,
+    response: HTTPURLResponse?
+  ) -> String {
+    let trimmedBody = String(data: responseData, encoding: .utf8)?
+      .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+
+    if let json = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any] {
+      if let msg = json["message"] as? String,
+         !msg.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        return msg.trimmingCharacters(in: .whitespacesAndNewlines)
+      }
+
+      if let detail = json["detail"] as? String,
+         !detail.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        return detail.trimmingCharacters(in: .whitespacesAndNewlines)
+      }
+    }
+
+    let contentType = response?.allHeaderFields["Content-Type"] as? String ?? response?.mimeType ?? ""
+    let lowercasedContentType = contentType.lowercased()
+    let lowercasedBody = trimmedBody.lowercased()
+    let looksLikeHtml =
+      lowercasedContentType.contains("text/html") ||
+      lowercasedBody.hasPrefix("<!doctype html") ||
+      lowercasedBody.hasPrefix("<html")
+
+    if looksLikeHtml {
+      if statusCode == 401 || statusCode == 403 || statusCode == 404 {
+        return "Invalid API Key"
+      }
+
+      return "OTP generation failed. Please verify the API credentials."
+    }
+
+    if !trimmedBody.isEmpty, trimmedBody.count <= 180, !trimmedBody.contains("<") {
+      return trimmedBody
+    }
+
+    return "OTP generation failed. Please verify the API credentials."
   }
 
   // MARK: - authenticateWithOtp
@@ -298,6 +337,5 @@ extension String {
     return macData.map { String(format: "%02x", $0) }.joined()
   }
 }
-
 
 
