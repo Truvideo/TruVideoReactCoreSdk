@@ -58,6 +58,11 @@ public struct TruVideoOptions : Swift.Sendable {
   public init(signer: any TruvideoSdk.Signer = HMACSHA256Signer())
 }
 public let TruvideoSdk: any TruvideoSdk.TruVideoSDK
+public struct AuthenticationError : Swift.Error {
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
 public struct TruVideoSdkError : Foundation.LocalizedError {
   public let kind: TruvideoSdk.TruVideoSdkError.ErrorReason
   public let errorDescription: Swift.String?
